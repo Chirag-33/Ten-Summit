@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import img from "../../assets/images/newspage-illu-1-1.webp";
 import "./news.css";
+import { newsData } from "../../assets/data/news_data.js";
+
 
 export default function News() {
   const [active, setActive] = useState("in-the-news");
@@ -42,8 +44,18 @@ export default function News() {
             </p>
           </div>
         ) : (
-          <div>
-            <h1>helloo</h1>
+          <div className="news-container">
+           {
+            newsData.map(({id,img,desc,date})=>{
+              return(
+                <div key={id} className="card">
+                  <img src={img} alt="newsimage" style={{height:"50px", width:"300px"}} />
+                  <h3 className="p1">{desc}</h3>
+                  <p className="p2">{date}</p>
+                </div>
+              )
+            })
+           }
           </div>
         )}
       </div>
