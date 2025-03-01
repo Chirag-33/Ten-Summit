@@ -11,6 +11,5 @@ urlpatterns = [
     path('agenda/', AgendaView.as_view(), name='agenda_view'),
     path('careers/', JobView.as_view()),
     path('jobApplication/', JobApplicationView.as_view()),
-    path('get_token', GetJWTTokenView.as_view()),
-    path('contact/', ContactAPIView.as_view())
+    path('contact/', ContactView.as_view())
 ]
