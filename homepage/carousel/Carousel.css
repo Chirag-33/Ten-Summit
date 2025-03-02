@@ -1,0 +1,353 @@
+.main {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  font-family: Archivo, sans-serif;
+}
+
+.title {
+  font-family: Archivo, sans-serif;
+  margin-bottom: 80px;
+}
+
+.carousel {
+  position: relative;
+  width: 850px;
+  max-width: 85%;
+  height: 350px;
+  margin: auto;
+  padding: 40px;
+  background: #000;
+  color: #fff;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid;
+}
+
+.carousel-card {
+  flex: 1;
+  padding: 60px;
+  text-align: justify;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-text {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #ddd;
+  padding-bottom: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-top: 20px;
+  gap: 12px;
+}
+
+.profile-pic {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.username {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+}
+
+.handle {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  font-size: 70px;
+  font-weight: lighter;
+  padding: 20px;
+  align-items: center;
+  color: #bbb;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav-btn:focus {
+  outline: none;
+}
+
+
+.prev {
+  position: absolute;
+  left: 10px;
+  border: none;
+}
+
+.next {
+  position: absolute;
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  
+  .title {
+    font-size: x-large;
+    margin-top: 150px;
+    font-family: Archivo, sans-serif;
+    margin-bottom: 80px;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 80%;
+    max-width: 90%;
+    height: 300px;
+    margin: auto;
+    padding: 40px;
+    background: #000;
+    color: #fff;
+    border-radius: 25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid;
+  }
+  
+  .carousel-card {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .testimonial-text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #ddd;
+    padding-bottom: 20px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 20px;
+    gap: 12px;
+  }
+  
+  .profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+  }
+  
+  .username {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .handle {
+    font-size: 14px;
+    color: #bbb;
+  }
+  
+  .nav-btn {
+    background: none;
+    border: none;
+    font-size: 50px;
+    font-weight: lighter;
+    padding: 10px;
+    align-items: center;
+    color: #bbb;
+    cursor: pointer;
+    outline: none;
+  }
+
+}
+
+
+@media (max-width: 431px) {
+  
+  .title {
+    font-size: x-large;
+    margin-top: 150px;
+    font-family: Archivo, sans-serif;
+    margin-bottom: 80px;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 70%;
+    max-width: 80%;
+    height: 300px;
+    margin: auto;
+    padding: 40px;
+    background: #000;
+    color: #fff;
+    border-radius: 25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid;
+  }
+  
+  .carousel-card {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .testimonial-text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #ddd;
+    padding-bottom: 20px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 20px;
+    gap: 12px;
+  }
+  
+  .profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+  }
+  
+  .username {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .handle {
+    font-size: 14px;
+    color: #bbb;
+  }
+  
+  .nav-btn {
+    background: none;
+    border: none;
+    font-size: 50px;
+    font-weight: lighter;
+    padding: 10px;
+    align-items: center;
+    color: #bbb;
+    cursor: pointer;
+    outline: none;
+  }
+
+}
+
+
+
+@media (max-width: 325px) {
+  
+  .title {
+    font-size: large;
+    margin-top: 70px;
+    font-family: Archivo, sans-serif;
+    margin-bottom: 70px;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 65%;
+    height: 300px;
+    margin: auto;
+    padding: 40px;
+    background: #000;
+    color: #fff;
+    border-radius: 25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid;
+  }
+  
+  .carousel-card {
+    flex: 1;
+    padding: 20px;
+    text-align: justify;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .testimonial-text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #ddd;
+    padding-bottom: 20px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 20px;
+    gap: 12px;
+  }
+  
+  .profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+  }
+  
+  .username {
+    font-size: 10px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .handle {
+    font-size: 10px;
+    color: #bbb;
+  }
+  
+  .nav-btn {
+    background: none;
+    border: none;
+    font-size: 50px;
+    font-weight: lighter;
+    padding: 10px;
+    align-items: center;
+    color: #bbb;
+    cursor: pointer;
+    outline: none;
+  }
+
+}
