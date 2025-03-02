@@ -20,7 +20,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Static files (CSS, JS, etc)
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "frontend" / "build" / "static",]
+STATIC_ROOT = BASE_DIR / 'static'
+# STATICFILES_DIRS = [BASE_DIR / "frontend" / "build" / "static",]
 
 # Media files (Images, Videos, etc)
 MEDIA_URL = '/media/'
@@ -77,8 +78,8 @@ ROOT_URLCONF = 'summit.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["templates"],
-        # 'DIRS': [BASE_DIR / "frontend" / "build"],
+        # 'DIRS': ["templates"],
+        'DIRS': [BASE_DIR / "frontend"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
