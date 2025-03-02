@@ -1,0 +1,171 @@
+.schedule-section {
+    text-align: center;
+    margin-top: -50px;
+    padding: 0px;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+  
+  .title {
+    font-family: Archivo, sans-serif;
+    font-size: 35px;
+    line-height: 28.5px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+  }
+  
+  .description {
+    font-size: 22px;
+    color: #b9b8b8;
+    margin-top: -20px;
+  }
+  
+  .button-wrapper {
+    margin-top: 20px;
+  }
+  
+  .button {
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  .button:hover{color: white;
+        font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .schedule-section {
+      text-align: center;
+      margin-top: 20px;
+      padding: 0px;
+  
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding-bottom: 50px;
+    }
+    
+    .title {
+      font-family: Archivo, sans-serif;
+      font-size: 35px;
+      line-height: 28.5px;
+      font-weight: lighter;
+      letter-spacing: 2px;
+    }
+    
+    .description {
+      font-size: 22px;
+      color: #b9b8b8;
+      margin-top: 30px;
+    }
+    
+    .button-wrapper {
+      margin-top: 20px;
+    }
+    
+    .button {
+      color: white;
+      font-weight: bold;
+      font-size: larger;
+    }
+  
+    .button:hover{color: white;
+          font-weight: bold;
+    }
+  }
+
+  
+  @media (max-width: 431px) {
+    .schedule-section {
+      text-align: center;
+      margin-top: -100px;
+      padding: 0px;
+    }
+    
+    .container {
+      max-width: 330px;
+      margin: 0 auto;
+      padding-bottom: 50px;
+    }
+    
+    .schedule-title {
+      font-family: Archivo, sans-serif;
+      font-size: 35px;
+      line-height: 28.5px;
+      font-weight: lighter;
+      letter-spacing: 2px;
+      margin-bottom: 50px;
+    }
+    
+    .description {
+      font-size: 20px;
+      color: #b9b8b8;
+      margin-top: -20px;
+    }
+    
+    .button-wrapper {
+      margin-top: 20px;
+    }
+    
+    .button {
+      color: white;
+      font-weight: bold;
+      font-size: larger;
+    }
+  
+    .button:hover{color: white;
+          font-weight: bold;
+    }
+  }
+
+  
+  @media (max-width: 320px) {
+    .schedule-section {
+      text-align: center;
+      margin-top: -60px;
+      padding: 0px;
+    }
+    
+    .container {
+      max-width: 300px;
+      margin: 0 auto;
+      padding-bottom: 50px;
+    }
+    
+    .schedule-title {
+      font-family: Archivo, sans-serif;
+      font-size: 25px;
+      line-height: 28.5px;
+      font-weight: lighter;
+      letter-spacing: 2px;
+      margin-bottom: 50px;
+    }
+    
+    .description {
+      font-size: 16px;
+      color: #b9b8b8;
+      margin-top: -20px;
+    }
+    
+    .button-wrapper {
+      margin-top: 20px;
+    }
+    
+    .button {
+      color: white;
+      font-weight: bold;
+      font-size: medium;
+    }
+  
+    .button:hover{color: white;
+          font-weight: bold;
+    }
+  }

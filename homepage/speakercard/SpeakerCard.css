@@ -1,0 +1,565 @@
+.speaker-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 70px;
+}
+
+.container-title {
+  margin: 0 auto;
+  padding-top: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.container-title h1 {
+  font-weight: 400;
+  font: Archivo, sans-serif sans-serif;
+  text-align: center;
+  font-size: 35px;
+  letter-spacing: normal;
+  padding: 0;
+}
+
+.speaker-card {
+  margin-left: 17px;
+  margin-right: 17px;
+  margin-top: 0px;
+  width: 330px;
+  height: 316px;
+  text-align: left;
+}
+
+.speaker-img {
+  width: 100%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.speaker-info {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.speaker-info h3,
+.speaker-info p,
+.speaker-info a {
+  margin: 0px;
+}
+
+.speaker-info h3 {
+  margin-top: 10px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 23.4px;
+}
+
+.speaker-role {
+  color: #666;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 20.8px;
+  font-weight: bold;
+}
+
+.speaker-info a {
+  color: #0077b5;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 50px;
+  border-radius: 5px;
+  width: 650px;
+  height: 400px;
+  max-width: 90%;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 490px;
+  color: #000;
+  font-size: 50px;
+  cursor: pointer;
+  box-shadow: none;
+  border: none;
+}
+
+.modal-header {
+  display: flex;
+  color: #000;
+  align-items: center;
+  gap: 15px;
+}
+
+.modal-img {
+  width: 165px;
+  color: #000;
+  object-fit: cover;
+}
+
+.company-logo {
+  margin-left: 25px;
+  width: 30%;
+  height: auto;
+  color: #000;
+}
+
+.modal-body {
+  margin-top: 15px;
+  color: #000;
+  text-align: left;
+}
+
+.linkedin-btn {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+}
+
+.linkedin-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.modal-text h2,
+p {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.background-container {
+  position: absolute;
+  top: 400px;
+  left: -800px;
+  width: 150%;
+  max-width: 200wh;
+  height: auto;
+  overflow: hidden;
+  z-index: -1;
+  /* Ensures it stays behind content */
+  display: flex;
+  align-items: flex-end;
+  /* Moves the image to the bottom */
+  justify-content: flex-start;
+  /* Moves it to the left */
+}
+
+.background-image {
+  width: 80%;
+  /* Allow natural width */
+  height: 80%;
+  /* Full height */
+  object-fit: cover;
+  transform-origin: bottom left;
+  /* Scale from the bottom-left */
+  transition: transform 0.2s ease-out;
+}
+
+.SpeakerCard-main {
+  position: relative;
+  z-index: 1;
+  font-family: Archivo, arial;
+}
+
+
+.background-star {
+  position: absolute;
+  z-index: 2;
+  /* Ensures stars are above the background */
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  transition: transform 0.1s linear;
+  /* Smooth movement */
+}
+
+.yellow-star {
+  width: 56px;
+  top: 25%;
+  right: 2.5%;
+}
+
+.blue-star {
+  width: 55px;
+  top: 35%;
+  right: 2%;
+}
+
+.yellow-star1 {
+  width: 55px;
+  top: 36%;
+  right: 3.5%;
+}
+
+.blue-star1 {
+  width: 55px;
+  top: 50%;
+  left: 2%;
+}
+
+@media (max-width: 768px) {
+
+  .speaker-card {
+    margin: auto;
+    margin-top: 0px;
+    width: 300px;
+    height: 316px;
+    text-align: left;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 50px;
+    border-radius: 5px;
+    width: 550px;
+    height: 300px;
+    max-width: 90%;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 420px;
+    color: #000;
+    font-size: 40px;
+    cursor: pointer;
+    box-shadow: none;
+    border: none;
+  }
+
+  .modal-header {
+    display: flex;
+    color: #000;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .modal-img {
+    width: 155px;
+    color: #000;
+    object-fit: cover;
+  }
+
+  .company-logo {
+    margin-left: 25px;
+    width: 25%;
+    height: auto;
+    color: #000;
+  }
+
+  .modal-body {
+    margin-top: 15px;
+    color: #000;
+    text-align: left;
+  }
+
+  .linkedin-btn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+  }
+
+  .linkedin-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .modal-text h2,
+  p {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .background-container {
+    position: absolute;
+    top: 300px;
+    left: -450px;
+    width: 150%;
+    height: auto;
+    overflow: hidden;
+    z-index: -1;
+    /* Ensures it stays behind content */
+    display: flex;
+    align-items: flex-end;
+    /* Moves the image to the bottom */
+    justify-content: flex-start;
+    /* Moves it to the left */
+  }
+
+  .background-image {
+    width: 90%;
+    /* Allow natural width */
+    height: 80%;
+    /* Full height */
+    object-fit: cover;
+    transform-origin: bottom left;
+    /* Scale from the bottom-left */
+    transition: transform 0.2s ease-out;
+  }
+
+
+  .SpeakerCard-main {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 430px) {
+  .speaker-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+    margin-bottom: 100px;
+  }
+
+  .background-container {
+    position: absolute;
+    top: 400px;
+    left: -800px;
+    width: 150%;
+    max-width: 200wh;
+    height: auto;
+    overflow: hidden;
+    z-index: -1;
+    /* Ensures it stays behind content */
+    display: flex;
+    align-items: flex-end;
+    /* Moves the image to the bottom */
+    justify-content: flex-start;
+    /* Moves it to the left */
+  }
+  
+  .background-image {
+    width: 80%;
+    /* Allow natural width */
+    height: 80%;
+    /* Full height */
+    object-fit: cover;
+    transform-origin: bottom left;
+    /* Scale from the bottom-left */
+    transition: transform 0.2s ease-out;
+  }
+  
+  .SpeakerCard-main {
+    position: relative;
+    z-index: 1;
+  }
+
+  
+
+  .yellow-star {
+    width: 56px;
+    top: 10%;
+    right: 0%;
+  }
+
+  .blue-star {
+    width: 55px;
+    top: 35%;
+    right: 0%;
+  }
+
+  .yellow-star1 {
+    width: 55px;
+    top: 36%;
+    right: 0.5%;
+  }
+
+  .blue-star1 {
+    width: 55px;
+    top: 50%;
+    left: 0%;
+  }
+  
+}
+
+@media (max-width: 325px) {
+
+  .speaker-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+    margin-bottom: 100px;
+  }
+
+  .speaker-card {
+    width: 220px;
+    height: 220px;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .container-title h1 {
+    font-weight: 400;
+    font: Archivo, sans-serif sans-serif;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: normal;
+    padding: 0;
+  }
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 50px;
+    border-radius: 5px;
+    width: 200px;
+    height: 300px;
+    max-width: 90%;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 180px;
+    color: #000;
+    font-size: 40px;
+    cursor: pointer;
+    box-shadow: none;
+    border: none;
+  }
+
+  .modal-header {
+    display: block;
+    color: #000;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .modal-img {
+    width: 100px;
+    color: #000;
+    object-fit: cover;
+  }
+
+  .company-logo {
+    margin-left: 25px;
+    width: 25%;
+    height: auto;
+    color: #000;
+  }
+
+  .modal-body {
+    margin-top: 10px;
+    color: #000;
+    text-align: left;
+  }
+
+  .modal-body {
+    width: 100%;
+    height: 110px;
+    overflow: scroll;
+  }
+
+  .linkedin-btn {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+  }
+
+  .linkedin-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .modal-text h2,
+  p {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+
+  .yellow-star {
+    width: 56px;
+    top: 10%;
+    right: 0%;
+  }
+
+  .blue-star {
+    width: 55px;
+    top: 35%;
+    right: 0%;
+  }
+
+  .yellow-star1 {
+    width: 55px;
+    top: 36%;
+    right: 0.5%;
+  }
+
+  .blue-star1 {
+    width: 55px;
+    top: 50%;
+    left: 0%;
+  }
+}

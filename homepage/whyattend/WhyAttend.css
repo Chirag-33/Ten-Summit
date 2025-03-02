@@ -1,0 +1,198 @@
+.why-attend {
+  background-color: black;
+  color: white;
+  padding: 40px;
+  border-radius: 25px;
+  max-width: 57%;
+  margin: auto;
+  margin-top: 100px;
+  text-align: left;
+  font-family: Arial, sans-serif;
+  border: 2px solid;
+}
+
+/* .why-attend-main{
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+} */
+
+.why-attend h2 {
+  font-size: 35px;
+  font-weight: normal;
+  margin: 0px;
+  margin-bottom: 25px;
+}
+
+.why-attend p {
+  font-size: 24px;
+  color: #b0b0b0;
+  line-height: 1.4;
+  /* margin-bottom: 30px; */
+}
+
+.why-attend h3 {
+  font-size: 28px;
+  font-weight: lighter;
+  /* margin-bottom: 10px; */
+}
+
+.why-attend-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.why-attend-list li {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 18px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.copy-right {
+  margin: 2%;
+  padding-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .why-attend {
+    background-color: black;
+    color: white;
+    padding: 40px;
+    border-radius: 25px;
+    max-width: 80%;
+    margin: auto;
+    margin-top: 100px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    border: 2px solid;
+  }
+}
+
+@media (max-width: 431px) {
+  .why-attend {
+    background-color: black;
+    color: white;
+    padding: 40px;
+    border-radius: 25px;
+    max-width: 70%;
+    margin: auto;
+    margin-top: 100px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    border: 2px solid;
+  }
+
+
+  .why-attend h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0px;
+    margin-bottom: 25px;
+  }
+
+  .why-attend p {
+    font-size: 20px;
+    color: #b0b0b0;
+    line-height: 1.4;
+    margin-bottom: 30px;
+  }
+
+  .why-attend h3 {
+    font-size: 25px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+  }
+
+  .why-attend-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .why-attend-list li {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 13px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .copy-right {
+    margin: 5%;
+  }
+}
+
+
+@media (max-width: 325px) {
+  .why-attend {
+    background-color: black;
+    color: white;
+    padding: 40px;
+    border-radius: 25px;
+    max-width: 65%;
+    margin: auto;
+    margin-top: 50px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+    border: 2px solid;
+  }
+
+
+  .why-attend h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0px;
+    margin-bottom: 25px;
+  }
+
+  .why-attend p {
+    font-size: 16px;
+    color: #b0b0b0;
+    line-height: 1.4;
+    margin-bottom: 30px;
+  }
+
+  .why-attend h3 {
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+  }
+
+  .why-attend-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .why-attend-list li {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    font-size: 8.5px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .copy-right {
+    margin: auto;
+    margin-top: 5%;
+    font-size: 10px;
+    width: 50%;
+  }
+}
