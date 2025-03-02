@@ -29,9 +29,10 @@ img {
 
 /* Tab Navigation */
 .tab {
+  margin: 50px auto;
   border: 2px solid #007bff;
-  margin: 50px 33%;
-  max-width: 800px;
+  
+  width: 500px;
   border-radius: 30px;
   padding: 10px;
   background: #c2dcf8;
@@ -127,4 +128,102 @@ img {
   gap: 20px;
   justify-content: center;
   padding: 0 20px;
+}
+.contact-conatianer{
+  background-color: #007bff;
+  margin-top: 200px;
+ 
+  display: flex;
+  justify-content: center;
+ 
+}
+.contact-card {
+  position: relative;
+  bottom: 100px;
+  background-color: #fbfcfc;
+   width: 40%;
+   border: thin solid #c6c2c2;
+   margin: 20px;
+   padding-bottom: 50px; 
+   border-radius: 10px;
+   
+}
+.contact-card a {
+  color: white;
+  background-color: #0F1040;
+  text-decoration: none;
+  margin: 20px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+
+
+}
+.contact-card a:hover {
+  background-color: aliceblue;
+  color: #0F1040;
+}
+.contact-card img{
+ position: relative;
+ bottom: 60px;
+
+}
+.contact-card h2{
+  position: relative;
+  bottom: 50px;
+  font-weight: 100;
+  padding: 10px 0;
+ 
+ }
+ .contact-card p{
+  position: relative;
+  bottom: 40px;
+  font-weight: 100;
+  font-size: 20px;
+ 
+ }
+ 
+ @media (max-width: 768px) {
+  .contact-card {
+    width: 90%;
+   
+  }
+  .contact-conatianer{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .tab {
+    width: 90%;
+  }
+  
+}
+@media (max-width: 1024px) {
+  .contact-card {
+    max-width: 60%;
+  }
+
+}
+
+
+
+@media (max-width: 480px) {
+  .tab button {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+  .image h1 {
+    font-size: 48px;
+  }
+  .p1 {
+    font-size: 18px;
+  }
+  .contact-conatianer{
+ 
+   align-items: center;
+  }
+  .contact-card {
+    max-width: 90%;
+  }
+ 
+
 }
