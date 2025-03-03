@@ -51,10 +51,27 @@ class JobApplicationSerializer(serializers.ModelSerializer):
     resume = serializers.FileField
     class Meta:
         model = JobApplication
-        fields = '__all__'
+        fields = ['first_name', 'last_name', 'email', 'phone', 'resume', 'cover_letter', 'linkedin_url']
+
+    def create(self, validated_data):
+        user = self.context['request'].user
+        job_application = JobApplication.objects.create(user=user, **validated_data)
+        return job_application
 
 
 class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contact
         fields = '__all__'
+
+class UserRegistrationSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True)
+    class Meta:
+        model = User
+        fields = ('username','email','password')
+    
+    def create(self, validated_data):
+        user = User(**validated_data)
+        user.set_password(validated_data['password'])
+        user .save()
+        return user

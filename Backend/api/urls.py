@@ -1,5 +1,6 @@
 from django.urls import path
 from .views import *
+from rest_framework_simplejwt.views import TokenObtainPairView
 
 app_name = 'api'
 
@@ -10,6 +11,9 @@ urlpatterns = [
     path('comments/' , CommentView.as_view(), name='comment_view'),
     path('agenda/', AgendaView.as_view(), name='agenda_view'),
     path('careers/', JobView.as_view()),
+    path('jobView/',JobView.as_view()),
     path('jobApplication/', JobApplicationView.as_view()),
-    path('contact/', ContactView.as_view())
+    path('contact/', ContactView.as_view()),
+    path('register/', UserRegistrationView.as_view()),
+    path('token/', TokenObtainPairView.as_view())
 ]
