@@ -41,7 +41,7 @@
 
 /* Title Styling */
 h2 {
-    font-size: 42px;
+    font-size: 36px;
     font-weight: 800;
     color: white;
     text-transform: uppercase;
@@ -51,7 +51,7 @@ h2 {
 
 /* Gradient Text */
 h2 span {
-    font-size: 45px;
+    font-size: 36px;
     font-weight: 800;
     background: linear-gradient(90deg, #00ffa3, #007bff, #a133ff);
     -webkit-background-clip: text;

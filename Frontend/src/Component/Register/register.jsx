@@ -49,7 +49,7 @@ const RegistrationModal = ({ onClose }) => {
       <div className="modal-box">
         <button className="close-btn" onClick={onClose} style={{color:"blue"}}>&times;</button>
         <h2 className="modal-title" >
-          Monster <span >S</span><span>C</span><span>ALE</span>
+          Monster <span>SCALE</span>
         </h2>
         <form onSubmit={handleSubmit} >
           <div className="form-container" style={{padding:"30px"}}>
@@ -57,13 +57,13 @@ const RegistrationModal = ({ onClose }) => {
   <input type="text" name="lastName" placeholder="Last Name *" required className="input-field" onChange={handleChange} />
   <input type="email" name="email" placeholder="Company Email *" required className="input-field" onChange={handleChange} />
   <input type="text" name="company" placeholder="Company *" required className="input-field" onChange={handleChange} />
-  <select name="country" required className="select-field" onChange={handleChange} style={{width:"375px"}} >
+  <select name="country" required className="select-field" onChange={handleChange} style={{width:"312px"}} >
     <option value="">Country *</option>
     {countries.map((country) => (
       <option key={country} value={country}>{country}</option>
     ))}
   </select>
-  <select name="jobRole" required className="select-field" onChange={handleChange} style={{width:"375px"}} >
+  <select name="jobRole" required className="select-field" onChange={handleChange} style={{width:"312px"}} >
     <option value="">Job Role *</option>
     {jobRoles.map((role) => (
       <option key={role} value={role}>{role}</option>
