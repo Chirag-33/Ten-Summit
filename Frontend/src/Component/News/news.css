@@ -1,4 +1,6 @@
 * {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -28,38 +30,67 @@ img {
 }
 
 /* Tab Navigation */
-.tab {
-  margin: 50px auto;
-  border: 2px solid #007bff;
-  
-  width: 500px;
-  border-radius: 30px;
-  padding: 10px;
-  background: #c2dcf8;
-  text-align: center;
+.toggle-container {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ padding: 20px 0;
+ 
 }
 
-.tab button {
-  padding: 10px 50px;
+.toggle {
+  position: relative;
+  display: flex;
+  width: 500px;
+  height: 70px;
+  background: #eaf3ff;
+  border: 2px solid #007bff;
+  border-radius: 30px;
+  padding:15px;
+  
+}
+
+.toggle button {
+  flex: 1;
   border: none;
   background: none;
-  font-size: 16px;
-  font-weight: normal;
+  font-size: 18px;
   color: #555;
+  padding: 10px ;
   cursor: pointer;
-  border-radius: 20px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
 }
 
-
-
-
-.tab button.activetab {
-  background: #f3f4f4;
+.toggle button.active {
   color: #007bff;
-  border-radius: 30px;
-  border: 2px solid #007bff;
+  
 }
+
+.slider {
+  
+  position: absolute;
+  width: 250px;
+  height: 40px;
+  background: white;
+  border-radius: 20px;
+  transition: 0.3s;
+  border: 2px solid #007bff;
+  
+}
+
+.slider.left {
+  left: 15px;
+  top: 14px;
+}
+
+.slider.right {
+  left: 47%;
+  top: 14px;
+}
+
 
 /* Card Styling */
 .card {
@@ -73,8 +104,8 @@ img {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   text-align: left;
   cursor: pointer;
-  display: flex; /* Make card a flex container */
-  flex-direction: column; /* Stack children vertically */
+  display: flex; 
+  flex-direction: column; 
 }
 
 .card img {
@@ -105,7 +136,7 @@ img {
 .p1 {
   padding-top: 10px;
   font-size: 22px;
-  font-weight: lighter;
+  font-weight: 300;
   transition: color 0.3s ease;
   word-spacing: 0.1em;
 }
@@ -117,7 +148,7 @@ img {
 .p2 {
   font-size: small;
   color: #777;
-  margin-top: auto; /* Push .p2 to the bottom */
+  margin-top: auto;
   padding-top: 20px;
 }
 
@@ -181,6 +212,39 @@ img {
   font-size: 20px;
  
  }
+ .press-container{
+  border: thin solid #c6c2c2;
+  text-align: left;
+  padding: 0px 70px;
+  margin: 50px 150px;
+ 
+  
+ }
+ .press-release-item{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+ }
+ .press-release-item  a{
+  
+  text-decoration: none;
+  color:#454242; 
+  font-weight:300;
+  font-size: 24px;
+  
+
+ }
+ .press-release-item  h3{
+  padding: 20px 0;
+ }
+
+ .post-date{
+  font-size: 14px;
+  padding-top: 50px ;
+  
+ }
+
  
  @media (max-width: 768px) {
   .contact-card {
@@ -192,7 +256,7 @@ img {
     flex-direction: column;
     gap: 30px;
   }
-  .tab {
+  .toggle {
     width: 90%;
   }
   
@@ -207,8 +271,11 @@ img {
 
 
 @media (max-width: 480px) {
-  .tab button {
-    padding: 10px 10px;
+  .toggle{
+    width: 250px;
+  }
+  .toggle button {
+    padding: 5px;
     font-size: 14px;
   }
   .image h1 {
@@ -224,6 +291,21 @@ img {
   .contact-card {
     max-width: 90%;
   }
- 
+  .slider.left {
+    left: 16px;
+    top: 14px;
+  }
+  
+  .slider.right {
+    left: 52%;
+    top: 14px;
+  }
+  .slider{
+    width: 110px;
+    
+  }
+  .press-container{
+    margin: 0 5px;
+  }
 
 }
