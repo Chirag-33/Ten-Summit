@@ -1,0 +1,209 @@
+/* Modal Background */
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    padding: 0%;
+    overflow-y: auto;
+}
+
+/* Modal Box */
+.modal-box {
+    background-color: #0c0b1d;
+    padding: 30px;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 23px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+}
+
+/* Close Button */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/* Title Styling */
+h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* Gradient Text */
+h2 span {
+    font-size: 36px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #00ffa3, #007bff, #a133ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Input Fields */
+.input-field,
+.select-field {
+    width: 100%;
+    padding: 12px;
+    border-radius: 3px;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 12px;
+    background-color: white;
+    color: black;
+}
+
+.input-field {
+    padding-right: 0%;
+}
+
+/* Register Button */
+.register-button {
+    background-color: #00d4ff;
+    color: black;
+    font-weight: inherit;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    padding: 14px;
+    width: 40%;
+    text-align: center;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-button:hover {
+    background-color: #00b8e6;
+}
+
+/* Code of Conduct Checkbox */
+.code-of-conduct {
+    display: flex;
+    align-items: center; 
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    gap: 8px;
+}
+
+.code-of-conduct input {
+    width: 16px;
+    height: 16px;
+    accent-color: #00d4ff;
+    cursor: pointer;
+    margin-right: 8px; /* Adds space between checkbox and text */
+}
+
+.code-of-conduct span {
+    display: inline;
+}
+
+.code-of-conduct a {
+    color: #00c3ff;
+    text-decoration: underline;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+        max-width: 480px; /* Adjust as needed */
+        margin: 0 auto;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    .checkbox-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .checkbox-container input {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-box {
+        width: 90%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h2 span {
+        font-size: 30px;
+    }
+
+    .form-container {
+        padding: 10px;
+    }
+
+    .input-field,
+    .select-field {
+        font-size: 14px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    select {
+        width: 100% !important; /* Override inline styles */
+    }
+
+    .register-button {
+        width: 50%;
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .code-of-conduct {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .code-of-conduct input {
+        width: 16px;
+        height: 16px;
+        margin: 0;
+    }
+
+    .code-of-conduct label {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+}
+
+.form-container{
+    font-size: 0%;
+}

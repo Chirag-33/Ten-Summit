@@ -9,6 +9,7 @@
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+  
 }
 
 
@@ -50,6 +51,8 @@ font-variant-numeric: normal;
     color: #333232;
     font-size: 20px;
     line-height: 1.5;
+    font-style:inherit;
+    text-align: left;
 }
 
 .para1 {
@@ -268,7 +271,9 @@ font-weight: 550;
     background: rgb(255,255,255);
     padding: 5px;
     transition: left 0.3s ease-in-out;
-}
+    text-align: left;
+
+  }
 
 .sidebar.open {
     left: 0;
@@ -286,6 +291,7 @@ font-weight: 550;
     color: #5f5e5e;
     background-color: white;
     padding-top: 1%;
+    text-align: left;
 }
 
 .close-btn {
@@ -325,6 +331,7 @@ font-weight: 550;
 .sidebar-switch {
     display: flex;
     justify-content: space-between;
+   
 }
 
 .sidebar-switch h5 {
@@ -418,6 +425,23 @@ input:checked + .slider::before {
     margin-left: 25%;
     padding-bottom: 15%;
 }
+.container1{
+     margin-top: 7%;
+}
+.container2{
+    margin-top: 7%;
+}
+
+.container3{
+    margin-top: 7%;
+}
+
+.container4{
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+
 
 
 
