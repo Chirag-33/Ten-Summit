@@ -2,11 +2,9 @@ import TrustCenter from "./pages/TrustCenter";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import News from "./pages/News";
-import NavbarX from './pages/NavbarX'
-import Career from "./pages/Career"
-import CookiePolicy from './pages/CookiePolicy/CookiePolicy'
 
-import News from "./Component/News/News";
+
+
 import NavbarX from './pages/NavbarX';
 import Career from "./pages/Career";
 import CookiePolicy from './pages/CookiePolicy/CookiePolicy';
