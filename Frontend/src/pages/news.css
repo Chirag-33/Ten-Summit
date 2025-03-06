@@ -170,6 +170,7 @@ img {
 }
 .contact-card {
   position: relative;
+
   bottom: 100px;
   background-color: #fbfcfc;
    width: 40%;
@@ -196,6 +197,7 @@ img {
 .contact-card img{
  position: relative;
  bottom: 60px;
+ left: 130px;
 
 }
 .contact-card h2{
