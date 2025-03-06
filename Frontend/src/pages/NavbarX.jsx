@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import "./Navbar.css";
-
+import Register from "./Register";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [showModal, setShowModal] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -17,10 +17,10 @@ const Navbar = () => {
         <a href="#speakers">Speakers</a>
         <a href="#about">About</a>
         <a href="#agenda">Agenda</a>
-        <a href="#register" className="register-button">
-          REGISTER
-        </a>
+        <button onClick={() => setShowModal(true)}>Register</button>
+          
       </div>
+      {showModal && <Register onClose={() => setShowModal(false)} />}
       <div className="menu-icon" onClick={toggleMenu}>
         ☰
       </div>
