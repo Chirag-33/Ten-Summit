@@ -15,7 +15,7 @@ export default function News() {
       <div className="toggle-container">
       <div className="toggle">
         <div
-          className={`slider ${activeTab === "news" ? "left" : "right"}`}
+          className={`slider1 ${activeTab === "news" ? "left" : "right"}`}
         ></div>
         <button
           className={activeTab === "news" ? "active" : ""}

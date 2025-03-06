@@ -67,9 +67,10 @@ img {
 .toggle button.active {
   color: #007bff;
   
+  
 }
 
-.slider {
+.slider1 {
   
   position: absolute;
   width: 250px;
@@ -81,12 +82,12 @@ img {
   
 }
 
-.slider.left {
+.slider1.left {
   left: 15px;
   top: 14px;
 }
 
-.slider.right {
+.slider1.right {
   left: 47%;
   top: 14px;
 }
@@ -298,11 +299,11 @@ img {
     top: 14px;
   }
   
-  .slider.right {
+  .slider1.right {
     left: 52%;
     top: 14px;
   }
-  .slider{
+  .slider1{
     width: 110px;
     
   }
