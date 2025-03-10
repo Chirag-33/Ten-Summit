@@ -1,51 +1,706 @@
-import React from 'react';
-// import { Link } from 'react-router-dom';
-import "./Team.css";
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
 
 
-function Team() {
-    return (
-        <div className='investor-team-container' > <div className='investor-team-section' > <div className='investor-team-section2' > <div className='investor-team-heading' > <h1>We are ScyllaDB</h1> </div> <div className='investor-team-sub-heading1' > <h2>/SILL-ah/DEE-BEE</h2> </div> <div className='investor-team-sub-heading2' > <h2>We are the team behind ScyllaDB, the database for predictable<br /> performance at scale.</h2> </div> <div className='elementor-main' > <div className='elementor1' > <img src="https://www.scylladb.com/wp-content/uploads/Monster.png" alt="ScyllaDB Mascot" /> </div> <div className='elementor2' > <img src="https://www.scylladb.com/wp-content/uploads/monster-company-hero-1.svg" alt="ScyllaDB Mascot" /> <img src="https://www.scylladb.com/wp-content/uploads/monster-company-hero-3.svg" alt="ScyllaDB Mascot" /> </div> </div> </div> </div> <div className='elementor-para' > <p>With team members across 27 countries, we prioritize a collaborative, open culture to ensure our users’ <br /> success. Organizations like Discord, Disney+, Expedia, Zillow, Palo Alto Networks, and Strava rely on <br /> ScyllaDB to deliver real-time responses for their data-intensive applications.</p> <div className='elementor-para-img' > <img src="https://www.scylladb.com/wp-content/uploads/story-image-1.png" alt="Our Story" /> <h2 className='elementor-para-h2' >Our Story</h2> <p className='elementor-span1' > <span className='elementor-para-span1' >ScyllaDB was founded by the team who designed and developed the KVM hypervisor, the default hypervisor in many cloud computing environments, including Google Compute Engine, Amazon Web Services, and OpenStack.</span> </p> <p className='elementor-span2' > <span className='elementor-para-span2' > Our company is growing rapidly and we have team members spread across the globe. This is our story.</span> </p> </div> <div className='elementor-para-para-h2' > <h2>Core Values</h2> </div> <div className='elementor-team-content-container-head' > <div className='elementor-team-content-container' > <div className='elementor-team-content' > <img src="https://www.scylladb.com/wp-content/uploads/about-open-culture-re.png" alt="Open Culture" /> <h4>Open Culture</h4> <p>Our work is done in the open and we are straightforward with each other.</p> </div> <div className='elementor-team-content' > <img src="https://www.scylladb.com/wp-content/uploads/about-open-culture-re.png" alt="Open Culture" /> <h4>Open Culture</h4> <p>Our work is done in the open and we are straightforward with each other.</p> </div> <div className='elementor-team-content' > <img src="https://www.scylladb.com/wp-content/uploads/about-open-culture-re.png" alt="Open Culture" /> <h4>Open Culture</h4> <p>Our work is done in the open and we are straightforward with each other.</p> </div> <div className='elementor-team-content' > <img src="https://www.scylladb.com/wp-content/uploads/about-open-culture-re.png" alt="Open Culture" /> <h4>Open Culture</h4> <p>Our work is done in the open and we are straightforward with each other.</p> </div> <div className='elementor-team-content' > <img src="https://www.scylladb.com/wp-content/uploads/about-open-culture-re.png" alt="Open Culture" /> <h4>Open Culture</h4> <p>Our work is done in the open and we are straightforward with each other.</p> </div> </div> </div> <h2 className='elementor-management-team' >ScyllaDB Management Team</h2> <div className='elementor-card-container-head' > <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='elementor-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" /> <div className='elementor-card-content' > <h3>Avi Kivity</h3> <h4>CTO & Co-founder</h4> <p className='para-arrow' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> </div> <div className='elementor-button-container' > <img src="https://www.scylladb.com/wp-content/uploads/scylla-enterprise-3.png" alt="reload" /> <div className='elementor-button-content' > <h2>Want to Join the ScyllaDB Team? <br /> We’re Hiring !</h2> <p className='button-arrow' > <a className='elementor-button' href="/careers/" >Open Positions </a> → </p> </div> </div> <div className='directors-heading' > <h2>ScyllaDB Board of Directors</h2> </div> <div className="director-card-container-head" > <div className='director-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/benny-schnaider-company.jpg" alt="Benny Schnaider" /> <div className="director-card-content" > <h3>Benny Schnaider</h3> <h4>Ravello Systems</h4> <p className='para-arrow2' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='director-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/adam-fisher-company.jpg" alt="Benny Schnaider" /> <div className="director-card-content" > <h3>Adam Fisher</h3> <h4>Bessemer Venture Partners</h4> <p className='para-arrow2' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='director-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/dor-laor-company.jpg" alt="Benny Schnaider" /> <div className="director-card-content" > <h3>Dor Laor</h3> <h4>ScyllaDB</h4> <p className='para-arrow2' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='director-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Benny Schnaider" /> <div className="director-card-content" > <h3>Avi Kivity</h3> <h4>ScyllaDB</h4> <p className='para-arrow2' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='director-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/davor-hebel-company.jpg" alt="Benny Schnaider" /> <div className="director-card-content" > <h3>Davor Hebel</h3> <h4>Eight Roads Ventures</h4> <p className='para-arrow2' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='director-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/yahal-zilka-company.jpg" alt="Benny Schnaider" /> <div className="director-card-content" > <h3>Yahal Zilka</h3> <h4>Magma Venture Partners</h4> <p className='para-arrow2' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='director-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/merav-weinryb-company.jpg" alt="Benny Schnaider" /> <div className="director-card-content" > <h3>Merav Weinryb</h3> <h4>Qualcomm Ventures</h4> <p className='para-arrow2' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='director-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/amir-fridman-company.jpg" alt="Benny Schnaider" /> <div className="director-card-content" > <h3>Amir Fridman</h3> <h4>Western Digital Corporation</h4> <p className='para-arrow2' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> <div className='director-card-container' > <img src="https://www.scylladb.com/wp-content/uploads/shahar-tzafrir-company.jpg" alt="Benny Schnaider" /> <div className="director-card-content" > <h3>Shahar Tzafrir</h3> <h4>TLV Partners</h4> <p className='para-arrow2' > <a className='open-bio' href="#" >See Bio </a> → </p> </div> </div> {
-            /* <div className='director-card-container'>
-                        <img src="https://www.scylladb.com/wp-content/uploads/benny-schnaider-company.jpg" alt="Benny Schnaider" />
-                        <div className="director-card-content">
-                            <h3>Benny Schnaider</h3>
-                            <h4>Ravello Systems</h4>
-                            <p className='para-arrow2'>
-                                <a className='open-bio' href="#">See Bio </a>
-                                →
-                            </p>
-                        </div>
-                    </div>                     */
-        }
-
-        </div> <div className="investor-heading" > <h2>ScyllaDB Investors</h2> </div> <div className='elementor-investors-container-head' > <div className='elementor-investors-container' > <img src="https://www.scylladb.com/wp-content/uploads/logo-bessemer-venture-partners-white.png" alt="Investor Logo" /> </div> <div className='elementor-investors-container' > <img src="https://www.scylladb.com/wp-content/uploads/8rds-logo-white.png" alt="Investor Logo" /> </div> <div className='elementor-investors-container' > <img src="https://www.scylladb.com/wp-content/uploads/logo-innovation-endeavors-white.png" alt="Investor Logo" /> </div> <div className='elementor-investors-container' > <img src="https://www.scylladb.com/wp-content/uploads/logo-magma-white.png" alt="Investor Logo" /> </div> <div className='elementor-investors-container' > <img src="https://www.scylladb.com/wp-content/uploads/logo-qualcomm-ventures-white.png" alt="Investor Logo" /> </div> <div className='elementor-investors-container' > <img src="https://www.scylladb.com/wp-content/uploads/logo-wing-white.png" alt="Investor Logo" /> </div> <div className='elementor-investors-container' > <img src="https://www.scylladb.com/wp-content/uploads/TLV-Partners_logo-white.png" alt="Investor Logo" /> </div> <div className='elementor-investors-container' > <img src="https://www.scylladb.com/wp-content/uploads/logo-western-digital-capital-white.png" alt="Investor Logo" /> </div> <div className='elementor-investors-container' > <img src="https://www.scylladb.com/wp-content/uploads/Vertex-white.png" alt="Investor Logo" /> </div> </div> <div className='elementor-explore-container-head' > <div className='elementor-explore-container' > <div className='elementor-explore-content' > <div className='elementor-explore-heading' > {
-            /* <img src="" alt="" /> */
-        }
-
-        <h3>Newsroom</h3> </div> <div> <p className='elementor-explore-para1' >Press coverage and announcements from ScyllaDB </p> <p className='elementor-explore-para2' > See What's New 
- → {
-            /* <Link to="">→</Link> */
-        }
-
-        </p> </div> </div> </div> <div className='elementor-explore-container' > <div className='elementor-explore-content' > <div className='elementor-explore-heading' > {
-            /* <img src="" alt="" /> */
-        }
-
-        <h3>Blog</h3> </div> <div> <p className='elementor-explore-para1' >Technical deep dives and tips and tricks from our experts </p> <p className='elementor-explore-para2' > Explore Now → {
-            /* <Link to="">→</Link> */
-        }
-
-        </p> </div> </div> </div> <div className='elementor-explore-container' > <div className='elementor-explore-content' > <div className='elementor-explore-heading' > {
-            /* <img src="" alt="" /> */
-        }
-
-        <h3>Contact Us</h3> </div> <div> <p className='elementor-explore-para1' >Drop us a line to get in touch or start a live chat </p> <p className='elementor-explore-para2' > Let's Talk
- → {
-            /* <Link to="">→</Link> */
-        }
-
-        </p> </div> </div> </div> </div> </div> </div>);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-export default Team;
+
+body {
+    background-color: rgb(93, 210, 25);
+}
+
+.investor-team-container {
+    width: 100vw;
+    margin: 0;
+    /* background-color: aqua; */
+
+}
+
+.investor-team-section {
+    margin-right: 120px;
+    width: 100vw;
+    height: 20%;
+    background-image: linear-gradient(180deg, #0F1040, #2C5ECB);
+    background-color: aqua;
+    /* background-image: radial-gradient(ellipse at 700px 700px,#2C5ECB , #0F1040); */
+    /* background: linear-gradient(to bottom, #000717, #d8dade); */
+    /* background: radial-gradient(ellipse at bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 38%, rgba(15, 16, 64, 1) 39%, rgba(15, 17, 65, 1) 60%, rgba(17, 21, 73, 1) 74%, rgba(20, 31, 91, 1) 86%, rgba(28, 51, 127, 1) 100%); */
+    color: #fff;
+    position: relative;
+
+}
+
+.investor-team-section1 {
+    position: absolute;
+    width: 50%;
+    /* height: 50%; */
+    background-color: coral;
+    background: linear-gradient(135deg, orange 60%, cyan);
+}
+
+.investor-team-section2 {
+    background-color: #501ba775;
+}
+
+.investor-team-heading {
+    /* position: absolute; */
+    padding-top: 20px;
+    margin: 15px;
+    /* margin-left: 700px; */
+    font-size: 28px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    /* font-family: "Poppins"; */
+
+    text-align: center;
+    justify-content: center;
+    /* background-color: #0F1040; */
+}
+
+.investor-team-sub-heading1 {
+    /* padding: 10px 10px; */
+    margin: 0px 0px 30px;
+    /* font-weight: 400; */
+    font-size: 20px;
+    /* font-family: 'roboto', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    justify-content: center;
+    /* background-color: #274EB0; */
+
+}
+
+.investor-team-sub-heading2 {
+    /* padding: 10px 10px; */
+    margin: 0px 0px 30px;
+    /* font-weight: 400; */
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    justify-content: center;
+    /* background-color: rgb(92, 128, 128); */
+}
+
+.elementor-main {
+    display: flex;
+    align-items: end;
+    /* background-image: -webkit-repeating-linear-gradient(rgb(50, 45, 197),rgb(29, 23, 205),rgb(80, 12, 189)); */
+    /* background-color: #0F1040; */
+}
+
+.elementor1 {
+    margin: 10px 10px;
+    padding: 10px 10px;
+    width: 150px;
+    height: 200px;
+    /* background-color: #ca1111; */
+}
+
+.elementor1>img {
+    flex-wrap: wrap;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    width: 150px;
+    height: 200px;
+}
+
+.elementor2 {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    /* background-color: #b42222; */
+}
+
+.elementor2>img {
+    flex-wrap: wrap;
+    margin: 5px 5px;
+    padding: 5px 5px;
+    width: 140px;
+    height: 250px;
+}
+
+.elementor-para>p {
+    /* margin-top: 25px; */
+    padding-top: 100px;
+    width: 100%;
+    height: 350px;
+    line-height: 1.6rem;
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    background-color: #0F1040;
+    color: #FFFFFF;
+    text-align: center;
+
+}
+
+.elementor-para-img {
+    /* width: 30%;
+    margin-top: 30px;
+    padding-left: 30px;
+    border: 1px solid;
+    border-radius: 1px;
+    /* background: rgba(255, 255, 255, 0.1); */
+
+    background-color: #0F1040;
+    color: #FFFFFF;
+    width: 32%;
+    height: 550px;
+    padding: 40px 30px;
+    margin: 0px auto;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.elementor-para-img>img {
+    /* padding-left: 50px;
+    position: relative;
+    display: flex;
+    margin-bottom: 40px;
+    background-color: rgb(1, 16, 11); */
+
+    width: 120px;
+    /* Adjust size as needed */
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid white;
+
+}
+
+.elementor-para-h2 {
+    width: 40%;
+    /* height: 50px; */
+    padding-top: 60px;
+    color: #fff;
+    text-align: left;
+    font-size: 25px;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+}
+
+.elementor-span {
+    width: 100%;
+    height: 100px;
+    padding-top: 30px;
+    color: #fff;
+    text-align: start;
+    line-height: 1.4rem;
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    /* background-color: #e80909; */
+}
+
+.elementor-para-span1 {
+    width: 100%;
+    height: 100px;
+    padding-top: 70px;
+    color: #fff;
+    text-align: start;
+    line-height: 1.4rem;
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    /* background-color: #e80925; */
+}
+
+.elementor-para-span2 {
+    width: 100%;
+    height: 100px;
+    padding-top: 70px;
+    margin-top: 80px;
+    color: #fff;
+    text-align: start;
+    line-height: 1.4rem;
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    /* background-color: #e80925; */
+}
+
+.elementor-para-para-h2 {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    padding-top: 30px;
+    font-weight: 200;
+    font-size: 30px;
+    background-color: #101444;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+}
+
+.elementor-team-content-container-head {
+    background-color: #101444;
+    /* background-color: yellow; */
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    /* display: flex; */
+    /* row-gap: 40px; */
+    /* margin: 20px 0px; */
+    /* column-gap: 30px; */
+    /* padding: 0px 40px; */
+}
+
+.elementor-team-content-container {
+    width: 78%;
+    height: 500px;
+    display: flex;
+    margin-left: 11%;
+    /* align-items: center; */
+    /* background-color: #000; */
+    justify-content: space-between;
+}
+
+.elementor-team-content {
+    background-color: #0F1040;
+    /* background-color: green; */
+    color: #fff;
+    width: 210px;
+    height: 420px;
+    margin-top: 40px;
+    position: relative;
+    border-radius: 8px;
+    border-color: #101444;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.elementor-team-content>img {
+    width: 210px;
+    height: 150px;
+    margin-left: -1px;
+    margin-top: -1px;
+    border-radius: 8px;
+
+}
+
+.elementor-team-content>h4 {
+    width: 100%;
+    height: 50px;
+    text-align: start;
+    color: #fff;
+    padding-top: 20px;
+    font-size: 28px;
+
+}
+
+.elementor-team-content>p {
+    width: 100%;
+    height: 50px;
+    text-align: start;
+    color: #fff;
+    padding-top: 23px;
+    font-size: 20px;
+}
+
+.elementor-management-team {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    font-size: 44px;
+    background-color: #2C5ECB;
+
+}
+
+.elementor-card-container-head {
+    /* margin-left: 10%; */
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 590px 590px;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.elementor-card-container {
+    width: 100%;
+    height: 250px;
+    margin-top: 20px;
+    background-color: rgb(24, 14, 69);
+    border: 1px solid rgb(255, 255, 0);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* position: relative; */
+    display: flex;
+
+}
+
+.elementor-card-container>img {
+
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: rgb(184, 14, 199);
+    /* padding: 20px 10px; */
+}
+
+.elementor-card-content {
+    width: 50%;
+    height: 100px;
+    /* background-color: #1322c1; */
+    justify-content: space-between;
+    align-items: center;
+    /* padding-top: 25px; */
+}
+
+
+.elementor-card-content>h3 {
+    text-align: start;
+    font-size: 35px;
+    padding-top: 20px;
+    padding-left: 30px;
+    color: #fff;
+
+}
+
+.elementor-card-content>h4 {
+    text-align: start;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-left: 30px;
+    color: #fff;
+}
+
+.elementor-card-content>p>a {
+    text-align: start;
+    font-size: 22px;
+    /* margin-top: 30px; */
+    padding-top: 40px;
+    padding-left: 30px;
+    color: #fff;
+    /* background-color: red; */
+}
+
+.para-arrow {
+    color: #fff;
+    font-size: 30px;
+}
+
+.elementor-button-container {
+    width: 78%;
+    height: 350px;
+    margin: 80px 165px;
+    background-color: #380252;
+    border: 1px solid rgb(255, 255, 0);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    /* flex-direction: row-reverse; */
+
+}
+
+/* .elementor-button-content {
+    width: 50%;
+    height: 100px;
+    /* background-color: #1322c1; */
+/* justify-content: space-between;
+    align-items: center; */
+/* padding-top: 25px; 
+} 
+*/
+
+.elementor-button-content>img {
+    width: 15%;
+    height: 30%;
+    /* margin: 70px 160px; */
+    margin-top: 80px;
+    margin-left: 150px;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(184, 14, 199);
+}
+
+.elementor-button-content>h2 {
+    width: 50%;
+    height: 40%;
+    font-size: 40px;
+    color: #fff;
+    margin: 40px 0px;
+    margin-left: 50px;
+    padding-top: 20px;
+    /* background-color: #ffff00; */
+    /* padding-left: 20px; */
+    justify-items: start;
+    align-items: start;
+}
+
+.elementor-button-content>p>a {
+    width: 30%;
+    height: 200px;
+    margin-top: 50px;
+    /* margin: 190px 0px;  */
+    /* margin-left: -50px; */
+    /* padding-right: 20%; */
+    color: #fff;
+    justify-items: center;
+    /* justify-content: start; */
+    align-items: center;
+    font-size: 25px;
+    /* padding-right: 50px; */
+    /* position: relative; */
+    background-color: #a4b6c4;
+    border: 1px solid rgb(22, 48, 181);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button-arrow {
+    color: #fff;
+    font-size: 30px;
+}
+
+.directors-heading {
+    /* margin-bottom: 50px; */
+    padding-bottom: 50px;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(1, 51, 100);
+}
+
+.director-card-container-head {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 590px 590px;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.director-card-container {
+    margin-top: 20px;
+    width: 100%;
+    height: 250px;
+    /* margin-left: 20px; */
+    background-color: rgb(24, 14, 69);
+    border: 1px solid rgb(255, 255, 0);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* position: relative; */
+    display: flex;
+
+}
+
+.director-card-container>img {
+    width: 40%;
+    height: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: rgb(184, 14, 199);
+    /* padding: 20px 10px; */
+}
+
+.director-card-content {
+    width: 50%;
+    height: 100px;
+    /* background-color: #1322c1; */
+    justify-content: space-between;
+    align-items: center;
+    /* padding-top: 25px; */
+}
+
+.director-card-content>h3 {
+    text-align: start;
+    font-size: 35px;
+    padding-top: 20px;
+    padding-left: 30px;
+    color: #fff;
+
+}
+
+.director-card-content>h4 {
+    text-align: start;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-left: 30px;
+    color: #fff;
+}
+
+.director-card-content>p>a {
+    text-align: start;
+    font-size: 22px;
+    /* margin-top: 30px; */
+    padding-top: 40px;
+    padding-left: 30px;
+    color: #fff;
+    /* background-color: red; */
+}
+
+
+.director-card-container>p>a {
+    width: 30%;
+    height: 200px;
+    margin-top: 50px;
+    /* margin: 190px 0px;  */
+    /* margin-left: -50px; */
+    /* padding-right: 20%; */
+    color: #fff;
+    justify-items: center;
+    /* justify-content: start; */
+    align-items: center;
+    font-size: 25px;
+    /* padding-right: 50px; */
+    /* position: relative; */
+    background-color: #a4b6c4;
+    border: 1px solid rgb(22, 48, 181);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.para-arrow2 {
+    color: #fff;
+    font-size: 30px;
+}
+
+.investor-heading {
+    height: 170px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 100px;
+    background-color: red;
+}
+
+.elementor-investors-container-head {
+    width: 78%;
+    height: 800px;
+    border: 1px solid;
+    border-radius: 10px;
+    margin-left: 160px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 390px 390px 390px;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #0F1040;
+}
+
+.elementor-investors-container {
+    /* justify-content: space-evenly; */
+    /* justify-content: space-between; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 20px 25px;
+    width: 95%;
+    height: 180px;
+    color: #fff;
+    /* background-color: rgb(141, 2, 111); */
+}
+
+.elementor-investors-container>img {
+    width: 80%;
+    height: 100px;
+    color: #fff;
+    padding: 20px 25px;
+    margin: 0px 40px;
+    /* background-color: #7d0202; */
+}
+
+
+.elementor-explore-container-head {
+    width: 100%;
+    height: 330px;
+    padding: 50px 160px;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: rgb(108, 1, 26); */
+}
+
+.elementor-explore-container {
+    width: 31%;
+    height: 230px;
+    border: 1px solid rgb(25, 48, 147);
+    align-items: center;
+    border-radius: 10px;
+    padding: 0px 10px;
+    margin-right: 20px;
+    background-color: #fff;
+}
+
+.elementor-explore-content {
+    width: 100%;
+    height: 200px;
+    padding: 30px 10px;
+    /* background-color: rgb(49, 1, 108); */
+}
+
+.elementor-explore-heading>h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 200;
+    color: #0F1040;
+    padding-bottom: 20px;
+    /* background-color: #ce067e; */
+}
+
+.elementor-explore-para1 {
+    width: 100%;
+    /* color: #fff; */
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.elementor-explore-para2 {
+    width: 100%;
+    /* color: #fff; */
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+/* .elementor-explore-content>p {
+    color: #fff;
+    font-size: 25px;
+    background-color: #0b6cdb; 
+    color: #fff; 
+
+
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 10px;
+    background-color: #000; 
+} */
+
+/* .elementor-explore-content>p {
+    width: 100%;
+    padding-top: 20px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    height: 100px;
+    text-align: start; 
+    background-color: #2e3001;
+} */
+
+
+/* .para-arrow3 {
+    width: 100%;
+    color: #fff;
+    font-size: 30px;
+} */
