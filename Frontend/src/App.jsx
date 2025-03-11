@@ -21,6 +21,7 @@ function App() {
           <Route path="/team" element={<Team />} /> 
         </Routes>
       </BrowserRouter>
+      
     </>
   );
 }

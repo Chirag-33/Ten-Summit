@@ -6,7 +6,9 @@ body {
     color: #0a0a23;
     background-color: white;
 }
-
+#root{
+    background-color: #fff;
+}
 /* Trust Center Header */
 .trust-center {
     background: linear-gradient(180deg, #0a0a23 0%, #1e3c72 50%, #2a69ac 100%);
@@ -26,6 +28,7 @@ body {
     margin: 60px auto;
     padding: 0 15px;
     text-align: left;
+    background-color: #fff;
 }
 
 /* Headings with More Space */
