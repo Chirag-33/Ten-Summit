@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import img from "../../assets/images/newspage-illu-1-1.webp";
+import img from "../assets/images/newspage-illu-1-1.webp";
 import "./news.css";
-import { newsData } from "../../assets/data/news_data.js";
+import { newsData } from "../assets/data/news_data.js";
 
 
 export default function News() {
