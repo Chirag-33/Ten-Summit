@@ -236,7 +236,7 @@ body {
     text-align: center;
     justify-content: center;
     color: #fff;
-    padding-top: 30px;
+    padding-top: 40px;
     font-weight: 200;
     font-size: 30px;
     background-color: #101444;
@@ -248,7 +248,7 @@ body {
     background-color: #101444;
     /* background-color: yellow; */
     width: 100%;
-    height: 600px;
+    height: 550px;
     justify-content: center;
     align-items: center;
     /* display: flex; */
@@ -260,12 +260,14 @@ body {
 
 .elementor-team-content-container {
     width: 78%;
-    height: 500px;
+    height: 450px;
     display: flex;
     margin-left: 11%;
-    /* align-items: center; */
-    /* background-color: #000; */
     justify-content: space-between;
+    background-color: #0F1040;
+    /* background-color: #101444; */
+    /* align-items: center; */
+    /* background-color: #c90606; */
 }
 
 .elementor-team-content {
@@ -273,7 +275,7 @@ body {
     /* background-color: green; */
     color: #fff;
     width: 210px;
-    height: 420px;
+    height: 380px;
     margin-top: 40px;
     position: relative;
     border-radius: 8px;
@@ -284,11 +286,9 @@ body {
 
 .elementor-team-content>img {
     width: 210px;
-    height: 150px;
-    margin-left: -1px;
-    margin-top: -1px;
-    border-radius: 8px;
-
+    /* background-color: pink; */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .elementor-team-content>h4 {
@@ -296,7 +296,8 @@ body {
     height: 50px;
     text-align: start;
     color: #fff;
-    padding-top: 20px;
+    /* padding-left: 10px; */
+    padding: 23px 10px;
     font-size: 28px;
 
 }
@@ -306,7 +307,8 @@ body {
     height: 50px;
     text-align: start;
     color: #fff;
-    padding-top: 23px;
+    /* padding-left: 10px; */
+    padding: 23px 10px;
     font-size: 20px;
 }
 
@@ -314,8 +316,10 @@ body {
     width: 100%;
     height: 100px;
     text-align: center;
+    color: #fff;
     font-size: 44px;
-    background-color: #2C5ECB;
+    background-color: #101444;
+    /* background-color: #2C5ECB; */
 
 }
 
@@ -626,6 +630,7 @@ body {
     padding: 50px 160px;
     display: flex;
     justify-content: space-between;
+    background-color: #fff;
     /* background-color: rgb(108, 1, 26); */
 }
 
@@ -673,34 +678,4 @@ body {
     padding: 15px 10px;
 }
 
-/* .elementor-explore-content>p {
-    color: #fff;
-    font-size: 25px;
-    background-color: #0b6cdb; 
-    color: #fff; 
 
-
-    width: 100%;
-    font-size: 20px;
-    text-align: center;
-    padding: 10px 10px;
-    background-color: #000; 
-} */
-
-/* .elementor-explore-content>p {
-    width: 100%;
-    padding-top: 20px;
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
-    height: 100px;
-    text-align: start; 
-    background-color: #2e3001;
-} */
-
-
-/* .para-arrow3 {
-    width: 100%;
-    color: #fff;
-    font-size: 30px;
-} */

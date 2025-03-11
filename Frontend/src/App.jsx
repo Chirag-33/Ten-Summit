@@ -5,6 +5,7 @@ import NavbarX from './pages/NavbarX';
 // import Career from "./pages/Career";
 import CookiePolicy from './pages/CookiePolicy';
 import Register from './pages/Register';
+import Team from "./pages/Team";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           {/* <Route path="/careers" element={<Career />} /> */}
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/register" element={<Register />} /> 
+          <Route path="/team" element={<Team />} /> 
         </Routes>
       </BrowserRouter>
     </>

@@ -51,24 +51,24 @@ function Team() {
                             <p>Our work is done in the open and we are straightforward with each other.</p>
                         </div>
                         <div className='elementor-team-content'>
-                            <img src="https://www.scylladb.com/wp-content/uploads/about-open-culture-re.png" alt="Open Culture" />
-                            <h4>Open Culture</h4>
-                            <p>Our work is done in the open and we are straightforward with each other.</p>
+                            <img src="https://www.scylladb.com/wp-content/uploads/about-commitment-re.png" alt="Open Culture" />
+                            <h4>Commitment</h4>
+                            <p>We are committed to excellence and bring our best game every day.</p>
                         </div>
                         <div className='elementor-team-content'>
-                            <img src="https://www.scylladb.com/wp-content/uploads/about-open-culture-re.png" alt="Open Culture" />
-                            <h4>Open Culture</h4>
-                            <p>Our work is done in the open and we are straightforward with each other.</p>
+                            <img src="https://www.scylladb.com/wp-content/uploads/about-yeswecan-re.png" alt="Open Culture" />
+                            <h4>Yes, We Can</h4>
+                            <p>The biggest challenges get us going in the morning.</p>
                         </div>
                         <div className='elementor-team-content'>
-                            <img src="https://www.scylladb.com/wp-content/uploads/about-open-culture-re.png" alt="Open Culture" />
-                            <h4>Open Culture</h4>
-                            <p>Our work is done in the open and we are straightforward with each other.</p>
+                            <img src="https://www.scylladb.com/wp-content/uploads/about-better-together-re.png" alt="Open Culture" />
+                            <h4>Better Together</h4>
+                            <p>We are one team. Cross-team pollination and a feedback culture make us better.</p>
                         </div>
                         <div className='elementor-team-content'>
-                            <img src="https://www.scylladb.com/wp-content/uploads/about-open-culture-re.png" alt="Open Culture" />
-                            <h4>Open Culture</h4>
-                            <p>Our work is done in the open and we are straightforward with each other.</p>
+                            <img src="https://www.scylladb.com/wp-content/uploads/about-fairness-re.png" alt="Open Culture" />
+                            <h4>Fairness</h4>
+                            <p>We are fair with ourselves, our users, our community, our investors, everyone.</p>
                         </div>
                     </div>
 
@@ -88,10 +88,10 @@ function Team() {
                         </div>
                     </div>
                     <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
+                        <img src="https://www.scylladb.com/wp-content/uploads/dor-laor-company.jpg" alt="Avi Kivity" />
                         <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
+                            <h3>Dor Laor</h3>
+                            <h4>CEO & Co-founder</h4>
                             <p className='para-arrow'>
                                 <a className='open-bio' href="#">See Bio </a>
                                 →
@@ -99,10 +99,10 @@ function Team() {
                         </div>
                     </div>
                     <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
+                        <img src="https://www.scylladb.com/wp-content/uploads/danit-livne-company.jpg" alt="Avi Kivity" />
                         <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
+                            <h3>Danit Livne</h3>
+                            <h4>CFO</h4>
                             <p className='para-arrow'>
                                 <a className='open-bio' href="#">See Bio </a>
                                 →
@@ -110,10 +110,10 @@ function Team() {
                         </div>
                     </div>
                     <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
+                        <img src="https://www.scylladb.com/wp-content/uploads/wayne-ariola-company.jpg" alt="Avi Kivity" />
                         <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
+                            <h3>Wayne Ariola</h3>
+                            <h4>Chief Marketing Officer</h4>
                             <p className='para-arrow'>
                                 <a className='open-bio' href="#">See Bio </a>
                                 →
@@ -121,10 +121,10 @@ function Team() {
                         </div>
                     </div>
                     <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
+                        <img src="https://www.scylladb.com/wp-content/uploads/jon-blake-company.jpg" alt="Avi Kivity" />
                         <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
+                            <h3>Jon Bakke</h3>
+                            <h4>CRO</h4>
                             <p className='para-arrow'>
                                 <a className='open-bio' href="#">See Bio </a>
                                 →
@@ -132,10 +132,10 @@ function Team() {
                         </div>
                     </div>
                     <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
+                        <img src="https://www.scylladb.com/wp-content/uploads/tzach-livyatan-company.jpg" alt="Avi Kivity" />
                         <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
+                            <h3>Tzach Livyatan</h3>
+                            <h4>VP of Product</h4>
                             <p className='para-arrow'>
                                 <a className='open-bio' href="#">See Bio </a>
                                 →
@@ -143,10 +143,10 @@ function Team() {
                         </div>
                     </div>
                     <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
+                        <img src="https://www.scylladb.com/wp-content/uploads/austin-rutherford-company.jpg" alt="Avi Kivity" />
                         <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
+                            <h3>Austin Rutherford</h3>
+                            <h4>SVP of Customer Engineering</h4>
                             <p className='para-arrow'>
                                 <a className='open-bio' href="#">See Bio </a>
                                 →
@@ -154,10 +154,10 @@ function Team() {
                         </div>
                     </div>
                     <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
+                        <img src="https://www.scylladb.com/wp-content/uploads/yaniv-kaul-company.jpg" alt="Avi Kivity" />
                         <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
+                            <h3>Yaniv Kaul</h3>
+                            <h4>VP of R&D</h4>
                             <p className='para-arrow'>
                                 <a className='open-bio' href="#">See Bio </a>
                                 →
@@ -165,10 +165,10 @@ function Team() {
                         </div>
                     </div>
                     <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
+                        <img src="https://www.scylladb.com/wp-content/uploads/gabriel-mizrahi.jpg" alt="Avi Kivity" />
                         <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
+                            <h3>Gabriel M. Mizrahi</h3>
+                            <h4>VP of Engineering</h4>
                             <p className='para-arrow'>
                                 <a className='open-bio' href="#">See Bio </a>
                                 →
@@ -176,10 +176,10 @@ function Team() {
                         </div>
                     </div>
                     <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
+                        <img src="https://www.scylladb.com/wp-content/uploads/karin-nidam-company.jpg" alt="Avi Kivity" />
                         <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
+                            <h3>Karin Nidam</h3>
+                            <h4>VP of Operations</h4>
                             <p className='para-arrow'>
                                 <a className='open-bio' href="#">See Bio </a>
                                 →
@@ -187,10 +187,10 @@ function Team() {
                         </div>
                     </div>
                     <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
+                        <img src="https://www.scylladb.com/wp-content/uploads/orit-zeltzer-niv-company.jpg" alt="Avi Kivity" />
                         <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
+                            <h3>Orit Zeltzer Niv</h3>
+                            <h4>VP People</h4>
                             <p className='para-arrow'>
                                 <a className='open-bio' href="#">See Bio </a>
                                 →
@@ -198,10 +198,10 @@ function Team() {
                         </div>
                     </div>
                     <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
+                        <img src="https://www.scylladb.com/wp-content/uploads/rich-nigro-company.jpg" alt="Avi Kivity" />
                         <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
+                            <h3>Rich Nigro</h3>
+                            <h4>VP of Sales</h4>
                             <p className='para-arrow'>
                                 <a className='open-bio' href="#">See Bio </a>
                                 →
@@ -209,10 +209,10 @@ function Team() {
                         </div>
                     </div>
                     <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
+                        <img src="https://www.scylladb.com/wp-content/uploads/Ilan-ackerman-company.jpg" alt="Avi Kivity" />
                         <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
+                            <h3>Ilan Ackerman</h3>
+                            <h4>VP Sales EMEA & APAC</h4>
                             <p className='para-arrow'>
                                 <a className='open-bio' href="#">See Bio </a>
                                 →
@@ -220,76 +220,10 @@ function Team() {
                         </div>
                     </div>
                     <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
+                        <img src="https://www.scylladb.com/wp-content/uploads/julia-angell-company.jpg" alt="Avi Kivity" />
                         <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
-                            <p className='para-arrow'>
-                                <a className='open-bio' href="#">See Bio </a>
-                                →
-                            </p>
-                        </div>
-                    </div>
-                    <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
-                        <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
-                            <p className='para-arrow'>
-                                <a className='open-bio' href="#">See Bio </a>
-                                →
-                            </p>
-                        </div>
-                    </div>
-                    <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
-                        <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
-                            <p className='para-arrow'>
-                                <a className='open-bio' href="#">See Bio </a>
-                                →
-                            </p>
-                        </div>
-                    </div>
-                    <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
-                        <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
-                            <p className='para-arrow'>
-                                <a className='open-bio' href="#">See Bio </a>
-                                →
-                            </p>
-                        </div>
-                    </div>
-                    <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
-                        <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
-                            <p className='para-arrow'>
-                                <a className='open-bio' href="#">See Bio </a>
-                                →
-                            </p>
-                        </div>
-                    </div>
-                    <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
-                        <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
-                            <p className='para-arrow'>
-                                <a className='open-bio' href="#">See Bio </a>
-                                →
-                            </p>
-                        </div>
-                    </div>
-                    <div className='elementor-card-container' >
-                        <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
-                        <div className='elementor-card-content'>
-                            <h3>Avi Kivity</h3>
-                            <h4>CTO & Co-founder</h4>
+                            <h3>Julia Angell</h3>
+                            <h4>VP Growth Marketing</h4>
                             <p className='para-arrow'>
                                 <a className='open-bio' href="#">See Bio </a>
                                 →
