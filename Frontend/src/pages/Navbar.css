@@ -36,9 +36,6 @@
 .register-button {
     border-radius: 50px;
     border: 2px solid #326DE6;
-    transition-behavior: normal;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
     transition-delay: 0s;
     transition-property: all;
     padding: 10px 20px;
