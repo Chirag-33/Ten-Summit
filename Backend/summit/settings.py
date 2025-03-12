@@ -61,7 +61,7 @@ INSTALLED_APPS = [
     'api',
 ]
 
-CORS_ALLOWED_ORIGINS = ['http://localhost:5174/']
+CORS_ALLOWED_ORIGINS = ['http://localhost:5174']
 
 MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
