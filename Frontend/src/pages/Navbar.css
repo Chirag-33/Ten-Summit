@@ -15,6 +15,12 @@
     color: white;
     text-decoration: none;
 }
+.navbar-brand a:hover{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
 
 /* Navbar Links */
 .navbar-links {
@@ -27,6 +33,9 @@
     color: white;
     text-decoration: none;
     font-size: 1rem;
+    padding: 0.5rem;
+    gap: 20px;
+    white-space: nowrap;
 }
 
 .navbar-links a:hover {
@@ -36,9 +45,6 @@
 .register-button {
     border-radius: 50px;
     border: 2px solid #326DE6;
-    transition-behavior: normal;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
     transition-delay: 0s;
     transition-property: all;
     padding: 10px 20px;

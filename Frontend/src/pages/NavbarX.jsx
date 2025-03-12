@@ -17,8 +17,7 @@ const Navbar = () => {
         <a href="#speakers">Speakers</a>
         <a href="#about">About</a>
         <a href="#agenda">Agenda</a>
-        <button onClick={() => setShowModal(true)}>Register</button>
-          
+        <button className="register-button" onClick={() => setShowModal(true)}>Register</button>
       </div>
       {showModal && <Register onClose={() => setShowModal(false)} />}
       <div className="menu-icon" onClick={toggleMenu}>
