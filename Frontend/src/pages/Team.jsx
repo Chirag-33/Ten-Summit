@@ -1,5 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import "./Team.css";
 
 
@@ -38,9 +37,9 @@ function Team() {
                         <p className='elementor-para-span1'>
                             ScyllaDB was founded by the team who designed and developed the KVM hypervisor, the default hypervisor in many cloud computing environments, including Google Compute Engine, Amazon Web Services, and OpenStack.
                         </p>
-                        <p className='elementor-para-span2'>
-                            Our company is growing rapidly and we have team members spread across the globe. This is our story.</span>
-                    </p>
+                        <p className='elementor-para-span2'> 
+                          <span>  Our company is growing rapidly and we have team members spread across the globe. This is our story.</span>
+                        </p>
                 </div>
                 <div className='elementor-para-img'>
                     <img src="https://www.scylladb.com/wp-content/uploads/story-image-1.png" alt="Our Story" />
