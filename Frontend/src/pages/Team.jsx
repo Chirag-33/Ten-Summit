@@ -12,10 +12,10 @@ function Team() {
                         <h1>We are ScyllaDB</h1>
                     </div>
                     <div className='investor-team-sub-heading1'>
-                        <h2>/SILL-ah/DEE-BEE</h2>
+                        <h3>/SILL-ah/DEE-BEE</h3>
                     </div>
                     <div className='investor-team-sub-heading2'>
-                        <h2>We are the team behind ScyllaDB, the database for predictable<br /> performance at scale.</h2>
+                        <h3>We are the team behind ScyllaDB, the database for predictable<br /> performance at scale.</h3>
                     </div>
                     <div className='elementor-main'>
                         <div className='elementor1'>
