@@ -184,7 +184,7 @@ body {
     margin: 0px auto;
     position: relative;
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: #0f99cd;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     color: #FFFFFF;
     /* background-color: #0F1040; */
@@ -302,15 +302,20 @@ body {
     height: 550px;
     justify-content: center;
     align-items: center;
+    
 }
 
 .elementor-team-content-container {
-    width: 78%;
+
+    width: 65%;
     height: 450px;
     display: flex;
     margin-left: 11%;
     justify-content: space-between;
     background-color: #0F1040;
+    
+    
+    
 
 }
 
@@ -326,11 +331,12 @@ body {
     border-color: #101444;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  
 }
 
 .elementor-team-content>img {
-    padding-bottom: 149px;
-    width: 250px;
+    padding-bottom: 150px;
+    width: 212px;
     /* background-color: pink; */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -338,12 +344,14 @@ body {
 
 .elementor-team-content>h4 {
     width: 100%;
-    height: 50px;
+    height: 0px;
+    margin-top: -150px;
     text-align: start;
     color: #fff;
     /* padding-left: 10px; */
     padding: 23px 10px;
-    font-size: 28px;
+    font-size: 26px;
+
 
 }
 
@@ -351,10 +359,10 @@ body {
     width: 100%;
     height: 50px;
     text-align: start;
-    color: #fff;
+    color: #b2b2b2;
     /* padding-left: 10px; */
     padding: 23px 10px;
-    font-size: 20px;
+    font-size: 21px;
 }
 
 .elementor-management-team {
@@ -362,7 +370,7 @@ body {
     height: 100px;
     text-align: center;
     color: #fff;
-    font-size: 44px;
+    font-size: 42px;
     background-color: #101444;
     /* background-color: #2C5ECB; */
 
@@ -381,8 +389,8 @@ body {
 }
 
 .elementor-card-container {
-    width: 100%;
-    height: 250px;
+    width: 97%;
+    height: 230px;
     display: flex;
     margin-top: 20px;
     background-color: rgb(24, 14, 69);
@@ -424,32 +432,36 @@ body {
 
 .elementor-card-content>h4 {
     text-align: start;
-    font-size: 18px;
+    font-size: 19px;
     padding-top: 20px;
     padding-left: 30px;
-    color: #fff;
+    color: #b2b2b2;
 }
 
 .elementor-card-content>p>a {
     text-align: start;
     font-size: 22px;
     /* margin-top: 30px; */
-    padding-top: 40px;
-    padding-left: 30px;
+    
     color: #fff;
     /* background-color: red; */
+    text-decoration: underline;
 }
 
 .para-arrow {
     color: #fff;
     font-size: 30px;
+    padding-bottom: 80px;
+    padding-right: 115px;
+   
+
 }
 
 .elementor-button-container {
     width: 78%;
     height: 350px;
     margin: 80px 165px;
-    background-color: #380252;
+    background-color:  #101444;
     border: 1px solid #fff;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -459,23 +471,23 @@ body {
 }
 
 .elementor-button-content>img {
-    width: 15%;
-    height: 30%;
-    /* margin: 70px 160px; */
-    margin-top: 80px;
-    margin-left: 150px;
+    width: 100px;
+    height: 175px;
+    /* / margin: 70px 160px;  */
+    margin-top: 100px;
+    margin-left: 250px;
     justify-items: center;
     align-items: center;
     background-color: rgb(184, 14, 199);
 }
 
 .elementor-button-content>h2 {
-    width: 50%;
-    height: 40%;
-    font-size: 40px;
+    width: 100%;
+    height: 10%;
+    font-size: 35px;
     color: #fff;
     margin: 40px 0px;
-    margin-left: 50px;
+    margin-right: 170px;
     padding-top: 20px;
     justify-items: start;
     align-items: start;
@@ -490,15 +502,27 @@ body {
     justify-items: center;
     align-items: center;
     font-size: 25px;
-    background-color: #a4b6c4;
+    background-color:  #101444;
     border: 1px solid rgb(22, 48, 181);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding:5px;
+   
+    
+ 
+
 }
 
 .button-arrow {
     color: #fff;
-    font-size: 30px;
+   font-size: 30px;
+   margin-top: 150px;
+   margin-right: 510px;
+   
+   
+   
+   
+    
 }
 
 .directors-heading {
@@ -522,8 +546,8 @@ body {
 }
 
 .director-card-container {
-    width: 100%;
-    height: 250px;
+    width: 94%;
+    height: 223px;
     margin-top: 20px;
     border: 1px solid #fff;
     border-radius: 15px;
@@ -553,7 +577,7 @@ body {
 
 .director-card-content>h3 {
     text-align: start;
-    font-size: 35px;
+    font-size: 34px;
     padding-top: 20px;
     padding-left: 30px;
     color: #fff;
@@ -563,19 +587,20 @@ body {
 
 .director-card-content>h4 {
     text-align: start;
-    font-size: 18px;
+    font-size: 20px;
     padding-top: 20px;
     padding-left: 30px;
-    color: #fff;
+    color: #b2b2b2;
     background-color: #0F1040;
 }
 
 .director-card-content>p>a {
     text-align: start;
     font-size: 22px;
-    padding-top: 40px;
-    padding-left: 30px;
+    
     color: #fff;
+    
+    text-decoration: underline;
     /* background-color: #0F1040; */
 
 }
@@ -593,11 +618,14 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     background-color: #0F1040;
+    
 }
 
 .para-arrow2 {
     color: #fff;
     font-size: 30px;
+    padding-right: 110px;
+    
 }
 
 .investor-heading {
@@ -623,15 +651,18 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #0F1040;
+ 
 }
 
 .elementor-investors-container {
     border: 1px solid;
     border-radius: 10px;
-    padding: 20px 25px;
+    padding: 20px 20px;
     width: 95%;
     height: 180px;
     color: #fff;
+    
+    
     /* background-color: rgb(141, 2, 111); */
 }
 
@@ -664,6 +695,7 @@ body {
     padding: 0px 10px;
     margin-right: 20px;
     background-color: #fff;
+    
 }
 
 .elementor-explore-content {
