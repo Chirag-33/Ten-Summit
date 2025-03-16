@@ -314,7 +314,7 @@ body {
 
 .elementor-team-content-container {
 
-    width: 65%;
+    width: 75%;
     height: 450px;
     display: flex;
     margin-left: 11%;
@@ -328,7 +328,7 @@ body {
     background-color: #0F1040;
     /* background-color: green; */
     color: #fff;
-    width: 210px;
+    width: 198px;
     height: 380px;
     margin-top: 40px;
     position: relative;
@@ -659,6 +659,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #0F1040;
+    
  
 }
 
@@ -670,6 +671,7 @@ body {
     width: 95%;
     height: 180px;
     color: #fff;
+
     
     
     /* background-color: rgb(141, 2, 111); */
@@ -692,6 +694,7 @@ body {
     display: flex;
     justify-content: space-between;
     background-color: #fff;
+
     /* background-color: rgb(108, 1, 26); */
 }
 
@@ -705,6 +708,7 @@ body {
     padding: 0px 10px;
     margin-right: 20px;
     background-color: #fff;
+   
     
 }
 
