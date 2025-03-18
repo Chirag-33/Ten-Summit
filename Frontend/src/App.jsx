@@ -12,7 +12,7 @@ function App() {
     <>
       <NavbarX />
       <BrowserRouter>
-        <Routes>
+          <Routes>  
           <Route path="/" element={<TrustCenter />} />
           <Route path="/news" element={<News />} />
           <Route path="/careers" element={<Career />} />
