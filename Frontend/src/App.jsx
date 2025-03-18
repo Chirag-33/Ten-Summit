@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<TrustCenter />} />
           <Route path="/news" element={<News />} />
-          {/* <Route path="/careers" element={<Career />} /> */}
+          <Route path="/careers" element={<Career />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/register" element={<Register />} /> 
           <Route path="/team" element={<Team />} /> 
