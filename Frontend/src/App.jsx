@@ -1,17 +1,17 @@
 import TrustCenter from "./pages/TrustCenter";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import News from "./pages/News";
-import NavbarX from './pages/NavbarX';
 import CookiePolicy from './pages/CookiePolicy';
 import Register from './pages/Register';
 import Team from "./pages/Team";
 import Home from "./pages/Home";
+import Navbar from "./pages/Navbar";
 
 
 function App() {
   return (
     <>
-      <NavbarX />
+      <Navbar />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
