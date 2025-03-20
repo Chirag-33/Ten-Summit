@@ -7,7 +7,6 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
   return (
     <nav className="navbar">
       <div className="navbar-brand">
