@@ -4,8 +4,17 @@ body {
   font-family: sans-serif;
 }
 
+#career-text {
+  font-size: 2rem;
+}
+
 #bottom-cards {
   color: black;
+  height: 100%;
+}
+
+#sea-monster-cards div {
+  height: 100%;
 }
 
 @keyframes slowGradientShift {
