@@ -80,8 +80,8 @@ ROOT_URLCONF = 'summit.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # 'DIRS': ["templates"],
-        'DIRS': [BASE_DIR / "frontend"],
+        'DIRS': ["templates"],
+        # 'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
