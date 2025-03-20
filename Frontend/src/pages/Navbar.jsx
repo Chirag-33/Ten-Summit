@@ -13,7 +13,7 @@ const Navbar = () => {
       </div>
       <ul className={menuOpen ? "nav-links active" : "nav-links"}>
         <li><a href="#speakers">Speakers</a></li>
-        <li><a href="#agenda">Agenda</a></li>
+        <li><a href="/agenda">Agenda</a></li>
         <li><a href="#about">About</a></li>
         <li><button className="register-btn">Register</button></li>
       </ul>
