@@ -11,7 +11,7 @@ import Navbar from "./pages/Navbar";
 function App() {
   return (
     <>
-      <Navbar />
+      <Navbar/>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
