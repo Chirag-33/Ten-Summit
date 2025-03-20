@@ -696,7 +696,8 @@ export default function News() {
             alt="conatct-img"
             style={{ width: "100px", height: "100px" }}
           />
-          <h2>Contact Us</h2>
+          <h3>Contact Us</h3>
+          
           <p>Drop us a line to get in touch or start a live chat.</p>
           <a href="#">Let's talk</a>
         </div>
@@ -707,9 +708,9 @@ export default function News() {
             alt="conatct-img"
             style={{ width: "200px", height: "100px" }}
           />
-          <h2>We're Hiring!</h2>
+          <h3>We're Hiring!</h3>
           <p>Ready to become a Sea Monster?</p>
-          <a href="#">View our open positions</a>
+          <a className="btn"  href="#">View our open positions</a>
         </div>
       </div>
     </>
