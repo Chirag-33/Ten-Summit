@@ -37,7 +37,7 @@ const Career = () => {
   return (
     <>
       <div className="md:p-24 bg-gradient-to-b from-blue-900 via-indigo-950 h-fit to-sky-400 text-white">
-        <div className="p-4">
+        <div className="p-4" id="career-text">
           <h2 className="text-center text-5xl md:text-6xl font-light md:text-center p-6 mb-4">
             Careers
           </h2>
@@ -200,11 +200,11 @@ const Career = () => {
             },
           ].map((item, index) => (
             <div key={index} className="p-[2px]">
-              <div className="flex flex-col justify-between items-center w-[17rem] h-full gradient-border">
+              <div className="flex flex-col justify-between items-center w-[17rem] h-[29rem] gradient-border">
                 <div>
                   <img src={item.src} alt={item.title} />
                 </div>
-                <div className="bg-indigo-950 p-4 text-white font-serif flex-grow flex flex-col justify-between min-h-[6rem]">
+                <div className="bg-indigo-950 p-4 text-white items-center font-serif flex-grow flex flex-col justify-between min-h-[6rem]">
                   <h5>{item.title}</h5>
                   <p className="text-gray-300">{item.description}</p>
                 </div>
@@ -236,7 +236,7 @@ const Career = () => {
         className="md:flex md:flex-row md:justify-center md:items-center flex flex-col justify-center items-center gap-8 text-center border text-lg font-stretch-semi-condensed p-4"
         id="bottom-cards"
       >
-        <div className="border border-gradient p-6 md:w-72 gradient-border">
+        <div className="border border-gradient p-6 w md:w-74 gradient-border">
           <div>
             <div className="flex justify-center items-center">
               <img src={newsroom} width={50} height={50} alt="" />
@@ -249,7 +249,7 @@ const Career = () => {
           </div>
         </div>
 
-        <div className="border p-6 md:w-72 gradient-border">
+        <div className="border p-6 md:w-74 gradient-border">
           <div>
             <div className="flex justify-center items-center">
               <img src={blog} width={50} height={50} alt="" />
@@ -262,7 +262,7 @@ const Career = () => {
           </div>
         </div>
 
-        <div className="border p-6 md:w-64 rounded-t-md gradient-border">
+        <div className="border p-6 md:w-74 rounded-t-md gradient-border">
           <div>
             <div className="flex justify-center items-center">
               <img src={phone} width={50} height={50} alt="" className="mr-2" />
