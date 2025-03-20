@@ -4,17 +4,15 @@ import News from "./pages/News";
 import CookiePolicy from './pages/CookiePolicy';
 import Register from './pages/Register';
 import Team from "./pages/Team";
+<<<<<<< Updated upstream
 import Home from "./pages/Home";
 import Navbar from "./pages/Navbar";
-import TermsAndServices from "./pages/TermsAndServices";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import ContactUs from "./pages/ContactUs";
 
 
 function App() {
   return (
     <>
-      <Navbar />
+      <Navbar/>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -29,6 +27,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>
+      <Team />
     </>
   );
 }

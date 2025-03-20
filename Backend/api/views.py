@@ -12,6 +12,7 @@ from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 from django.utils.html import strip_tags
 from django.template.loader import render_to_string
+from rest_framework import generics
 
 class ScheduleView(APIView):
     permission_classes = [AllowAny]
@@ -93,7 +94,26 @@ class JobApplicationView(APIView):
                 serializer.save()
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        
+
+class GetJWTTokenView(APIView):
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        print('get token called')
+        if not request.user.is_authenticated: 
+            return Response({"error": "Authentication failed."}, status=status.HTTP_401_UNAUTHORIZED)
+        try:
+            social_account = SocialAccount.objects.get(user=request.user)
+            user = social_account.user
+            refresh = RefreshToken.for_user(user)
+            return Response({
+                'refresh': str(refresh),
+                'access': str(refresh.access_token),
+            })
+        except SocialAccount.DoesNotExist:
+            return Response({'error': 'Social Account not found '}, status=status.HTTP_400_BAD_REQUEST)
+        except Exception as e:
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)        
 
 class ContactView(APIView):
     permission_classes = [AllowAny]
@@ -119,3 +139,7 @@ class ContactView(APIView):
 
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class UserRegistrationView(generics.CreateAPIView):
+    permission_classes = [AllowAny]
+    serializer_class = UserRegistrationSerializer

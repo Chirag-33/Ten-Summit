@@ -1,7 +1,6 @@
 import React from 'react';
 import "./Team.css";
 
-
 function Team() {
 
     return (
@@ -61,26 +60,6 @@ function Team() {
                         Our company is growing rapidly and we have team members spread across the globe. This is our story.
                     </p>
                 </div>
-                {/* <div className='elementor-para-img'>
-                        <img src="https://www.scylladb.com/wp-content/uploads/story-image-1.png" alt="Our Story" />
-                        <h2 className='elementor-para-h2'>Our Story</h2>
-                        <p className='elementor-span1'>
-                            <span className='elementor-para-span1'>ScyllaDB was founded by the team who designed and developed the KVM hypervisor, the default hypervisor in many cloud computing environments, including Google Compute Engine, Amazon Web Services, and OpenStack.</span>
-                        </p>
-                        <p className='elementor-span2'>
-                            <span className='elementor-para-span2'>  Our company is growing rapidly and we have team members spread across the globe. This is our story.</span>
-                        </p>
-                    </div>
-                    <div className='elementor-para-img'>
-                        <img src="https://www.scylladb.com/wp-content/uploads/story-image-1.png" alt="Our Story" />
-                        <h2 className='elementor-para-h2'>Our Story</h2>
-                        <p className='elementor-span1'>
-                            <span className='elementor-para-span1'>ScyllaDB was founded by the team who designed and developed the KVM hypervisor, the default hypervisor in many cloud computing environments, including Google Compute Engine, Amazon Web Services, and OpenStack.</span>
-                        </p>
-                        <p className='elementor-span2'>
-                            <span className='elementor-para-span2'>  Our company is growing rapidly and we have team members spread across the globe. This is our story.</span>
-                        </p>
-                    </div> */}
             </div>
             <div className='elementor-para-para-h2'>
                 <h2>Core Values</h2>
@@ -386,18 +365,6 @@ function Team() {
                         </p>
                     </div>
                 </div>
-
-                {/* <div className='director-card-container'>
-                        <img src="https://www.scylladb.com/wp-content/uploads/benny-schnaider-company.jpg" alt="Benny Schnaider" />
-                        <div className="director-card-content">
-                            <h3>Benny Schnaider</h3>
-                            <h4>Ravello Systems</h4>
-                            <p className='para-arrow2'>
-                                <a className='open-bio' href="#">See Bio </a>
-                                →
-                            </p>
-                        </div>
-                    </div>                     */}
             </div>
             <div className="investor-heading">
                 <h2>ScyllaDB Investors</h2>
