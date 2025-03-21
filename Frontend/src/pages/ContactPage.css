@@ -28,6 +28,7 @@ body {
   text-align: center;
   color: white;
   padding: 60px 20px;
+  margin: 0;
   background-image: linear-gradient(
     180deg,
     hsl(240deg 100% 20%) 0%,
@@ -123,6 +124,7 @@ body {
   border: 10px solid transparent;
   border-image: linear-gradient(45deg, #ffffff, #ffffff, #029aff);
   border-image-slice: 1;
+  justify-content: space-between;
 }
 .info-card:hover {
   transform: scale(1.02);
@@ -142,9 +144,8 @@ body {
   font-size: 0.9rem;
 }
 .tags {
-  width: 100%;
-  text-align: right;
-  padding: 2rem;
+  flex-shrink: 0; /* Prevents shrinking */
+  padding-right: 1rem; /* Ensures some spacing from the edge */
   font-size: xx-large;
 }
 /* Right Section - Contact Form */
