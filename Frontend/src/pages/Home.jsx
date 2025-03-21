@@ -54,7 +54,7 @@ const Home = () => {
               />
               <div className="session-preview__info">
                 <h3 className="session-preview__title">
-                  <a href="#">Build Next-Gen Data Pipelines</a>
+                  <a href="#">Build Next-Gen Data <br/> Pipelines</a>
                 </h3>
                 <h4 className="session-preview__speaker-info">
                   Chris Riccomini
@@ -77,7 +77,7 @@ const Home = () => {
               />
               <div className="session-preview__info">
                 <h3 className="session-preview__title">
-                  <a href="#">The Future of Search & AI</a>
+                  <a href="#">The Future of Search <br/> & AI</a>
                 </h3>
                 <h4 className="session-preview__speaker-info">Vicki Niu</h4>
                 <p>Senior Engineer, Discord</p>
@@ -97,7 +97,7 @@ const Home = () => {
               />
               <div className="session-preview__info">
                 <h3 className="session-preview__title">
-                  <a href="#">Mastering Cloud Architecture</a>
+                  <a href="#">Mastering Cloud <br/> Architecture</a>
                 </h3>
                 <h4 className="session-preview__speaker-info">
                   Kelsey Hightower

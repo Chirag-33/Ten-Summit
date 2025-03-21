@@ -34,11 +34,11 @@ body {
 .hero {
   padding: 40px 20px;
   position: relative;
-  min-height: 60vh;
+  min-height: 40vh;
 }
 
 .hero-content {
-  margin-top: 15%;
+  margin-top: 10%;
 }
 
 .title {
@@ -358,10 +358,9 @@ h5.session-preview__speaker-info {
 
 /* Tablets (768px and below) */
 @media screen and (max-width: 768px) {
-  .hero-content {
-    margin-top: 25%;
+  .hero {
+    min-height: 50vh;
   }
-
   .title {
     font-size: 3rem;
   }
@@ -394,9 +393,9 @@ h5.session-preview__speaker-info {
 
 /* Mobile Screens (480px and below) */
 @media screen and (max-width: 480px) {
-  /* .hero-content{
-    margin-top: 40%;
-  } */
+  .hero {
+    min-height: 45vh;
+  }
 
   .title {
     font-size: 2.5rem;
@@ -439,9 +438,9 @@ h5.session-preview__speaker-info {
 
 /* Small Mobile Screens (360px and below) */
 @media screen and (max-width: 360px) {
-  /* .hero-content{
-    margin-top: 50%;
-  } */
+  .hero {
+    min-height: 40vh;
+  }
   .title {
     font-size: 2rem;
   }

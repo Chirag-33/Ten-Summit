@@ -69,7 +69,7 @@ const sectionsData = [
     subtitle: "Natalie Kim",
     newtitle: "Lead UX Designer at PixelCraft",
     description: "Discover the latest UX/UI trends that will shape the future of web and app design...",
-    imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVofSDqJ9dlX6HlCmmMUAej7Pq_Oe16PnSmw&s",
+    imgSrc: "https://cdn.sanity.io/images/0mnqm898/production/c00bce58c817ec3a16945711111641d37320ae67-2240x1260.png",
   },
   {
     id: 10,
