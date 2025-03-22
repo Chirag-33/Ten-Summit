@@ -4,6 +4,35 @@ body {
   font-family: "Archivo", Sans-serif;
   color: white;
 }
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 200vh;
+  background: radial-gradient(circle, #020024, #090979, #020024);
+  overflow: hidden;
+}
+
+/* Twinkling Stars */
+.stars .star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px white;
+}
+
+/* Floating Planets */
+.floating-planets .planet {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #ff5722, #e91e63);
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+  opacity: 0.9;
+}
+
 
 @keyframes moveStars {
   from {
@@ -19,12 +48,12 @@ body {
   top: 10;
   left: 0;
   width: 100vw;
-  height: 200vh;
+  height: auto;
   z-index: -1;
-  background: url("https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwbmlnaHQlMjBza3l8ZW58MHx8MHx8fDA%3D");
+  /* background: url("https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwbmlnaHQlMjBza3l8ZW58MHx8MHx8fDA%3D");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .home-container {
@@ -91,10 +120,10 @@ h4.session-preview__speaker-info {
 
 .featured-sessions {
   padding-bottom: 10%;
-  background: url("https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwbmlnaHQlMjBza3l8ZW58MHx8MHx8fDA%3D");
+  /* background: url("https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwbmlnaHQlMjBza3l8ZW58MHx8MHx8fDA%3D");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .session-title {
@@ -130,10 +159,10 @@ h5.session-preview__speaker-info {
 }
 
 .all-sessions {
-  background: url("https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwbmlnaHQlMjBza3l8ZW58MHx8MHx8fDA%3D");
+  /* background: url("https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJsYWNrJTIwbmlnaHQlMjBza3l8ZW58MHx8MHx8fDA%3D");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   padding: 50px 20px;
 }
 
@@ -187,11 +216,18 @@ h5.session-preview__speaker-info {
   border-radius: 16px 16px 0 0;
 }
 
+.all-session-title, .session-title{
+  font-weight: 400;
+}
+
+
+
 @media (max-width: 1024px) {
   .title {
     font-size: 2.5rem;
   }
 }
+
 
 .scale {
   background: linear-gradient(to left, #955eef, #3ff5ef);
@@ -282,6 +318,7 @@ h5.session-preview__speaker-info {
   .session-card {
     width: 90%;
   }
+
 }
 
 .all-sections-container {
@@ -340,6 +377,13 @@ h5.session-preview__speaker-info {
   .title {
     font-size: 4rem;
   }
+  .animated-space {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100vw;
+    height: auto;
+  }
 
   .subtitle {
     font-size: 42px;
@@ -354,10 +398,21 @@ h5.session-preview__speaker-info {
     width: 30%;
     max-width: 30%;
   }
+
+  .all-session-title, .session-title{
+    font-weight: 300;
+  }
 }
 
 /* Tablets (768px and below) */
 @media screen and (max-width: 768px) {
+  .animated-space {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100vw;
+    height: auto;
+  }
   .hero {
     min-height: 50vh;
   }
@@ -379,15 +434,26 @@ h5.session-preview__speaker-info {
     gap: 20px;
   }
 
-  .session-box {
-    margin-left: 10%;
-    margin-right: 10%;
+  .session-box{
+    margin: 0;
+    width: 90%;
+  }
+
+  .all-session-title, .session-title{
+    font-size: 2.8rem;
+    padding: 0;
+    font-weight: 300;
+    margin-bottom: 4rem;
   }
 
   .session-card,
   .all-section-card {
-    width: 45%;
-    max-width: 45%;
+    width: 48%;
+    max-width: 48%;
+  }
+  .session-box{
+    margin: 0;
+    width: 96%;
   }
 }
 
@@ -395,6 +461,13 @@ h5.session-preview__speaker-info {
 @media screen and (max-width: 480px) {
   .hero {
     min-height: 45vh;
+  }
+  .animated-space {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100vw;
+    height: auto;
   }
 
   .title {
@@ -418,6 +491,17 @@ h5.session-preview__speaker-info {
   .all-section-card {
     width: 100%;
     max-width: 100%;
+    margin: 0;
+  }
+  .session-box{
+    margin: 0;
+    width: 90%;
+  }
+
+  .all-session-title, .session-title{
+    font-size: 2.3rem;
+    padding: 0;
+    font-weight: 300;
   }
 
   .session-preview__video-link-1,
@@ -431,15 +515,19 @@ h5.session-preview__speaker-info {
     margin: 10px 0;
   }
 
-  .all-sections-container {
-    padding: 10%;
-  }
 }
 
 /* Small Mobile Screens (360px and below) */
 @media screen and (max-width: 360px) {
   .hero {
     min-height: 40vh;
+  }
+  .animated-space {
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100vw;
+    height: auto;
   }
   .title {
     font-size: 2rem;
@@ -453,10 +541,22 @@ h5.session-preview__speaker-info {
     font-size: 16px;
   }
 
+  .all-session-title, .session-title{
+    font-size: 2.2rem;
+    padding: 10px;
+    font-weight: 300; 
+    margin-bottom: 1.5rem;
+  }
   .session-preview__video-link-1,
   .session-preview__video-link-2,
   .session-preview__video-link-3 {
     font-size: 16px;
     padding: 8px;
   }
+  .session-box {
+    width: 88%;
+    margin: 0; 
+}
+
+
 }

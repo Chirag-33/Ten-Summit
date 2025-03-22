@@ -1,27 +1,65 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "./Home.css";
 import sectionsData from "../assets/sectionData";
-
-import { useState, useEffect } from "react";
-
 
 const Home = () => {
   const [animate, setAnimate] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setAnimate(false); // Stop animation after 1 second
+      setAnimate(false);
     }, 1000);
   }, []);
 
   return (
-    <motion.div
-       className="home-container animated-space"
-      initial={{ backgroundPosition: "0% 0%" }}
-      animate={animate ? { backgroundPosition: "50% 50%" } : {}}
-      transition={{ duration: 6, ease: "linear" }}
-    >
+    <motion.div className="home-container animated-space">
+      {/* Twinkling Stars */}
+      <div className="stars">
+        {[...Array(50)].map((_, index) => (
+          <motion.div
+            key={index}
+            className="star"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: [0, 1, 0] }}
+            transition={{
+              duration: Math.random() * 3 + 1,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Animated Floating Planets */}
+      <div className="floating-planets">
+        {[...Array(5)].map((_, index) => (
+          <motion.div
+            key={index}
+            className="planet"
+            initial={{ opacity: 0.8 }}
+            animate={{
+              y: [0, -30, 0],
+              rotate: [0, 360],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: Math.random() * 5 + 3,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+          />
+        ))}
+      </div>
+
       <header className="hero">
         <motion.div
           className="hero-content"
@@ -34,8 +72,7 @@ const Home = () => {
           </h1>
           <h2 className="subtitle">Pushing the Boundaries of Data</h2>
           <p className="description">
-            Explore groundbreaking innovations in database engineering and
-            scalability.
+            Explore groundbreaking innovations in database engineering and scalability.
             <br />
             Access 50+ expert-led sessions on demand.
           </p>
