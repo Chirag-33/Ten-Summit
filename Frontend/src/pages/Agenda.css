@@ -12,17 +12,40 @@
     overflow-x: hidden;
     box-sizing: border-box;
   }
+  .stars .star {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white;
+  }
+  
+  /* Floating Planets */
+  .floating-planets .planet {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #8222ff, #e91e63);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+    opacity: 0.9;
+  }
+  @keyframes moveStars {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 200% 200%;
+    }
+  }
   .animated-background {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 10;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: auto;
     z-index: -1;
-    background-size: 120% 120%;
-    background-position: center;
-    background-repeat: no-repeat;
-    pointer-events: none;
   }
   /* Container for the content with padding */
   .agenda-content {
@@ -31,6 +54,9 @@
     box-sizing: border-box;
     max-width: 960px;
     margin: 0 auto;
+    display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   }
   
   /* Header styles */
@@ -132,6 +158,7 @@
     position: relative;
     margin-bottom: 2rem;
     width: 100%;
+  height: 100%;
     display: block;
   }
   
@@ -139,7 +166,7 @@
   .time-badge {
     position: relative;
     z-index: 1;
-    transform: translate(-25vw, 5vh);
+  
 
   }
   
@@ -154,9 +181,10 @@
     color: white;
     text-transform: uppercase;
     border: 1px solid white;
-    position: relative;
-    left: 15px;
-    top: 15px;
+    position: absolute;
+    /* Adjust positioning to work with grid layout */
+    left: 10px;
+    top: 10px;
   }
   
   /* Event card */
@@ -167,24 +195,31 @@
     overflow: hidden;
     color: white;
     width: 100%;
+    height: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
   }
   
   /* Event Header Styling - added top padding for time label */
   .agenda-event-header {
-    padding: 35px 20px 20px;
+    padding: 25px 20px 20px;
     cursor: pointer;
     position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
   }
   
   /* Author name */
   .agenda-event-author {
     font-size: 10px;
-    font-weight: bold;
-    color: white;
-    margin-bottom: -10px;
-    margin-top: 30px;
-    text-align: left;
-    padding: 10px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: -10px;
+  margin-top: 20px; /* Reduced from 30px */
+  text-align: left;
+  padding: 10px;
   }
   
   /* Company/Organization */
@@ -199,8 +234,10 @@
   /* Title row with title and chevron */
   .agenda-event-title-row {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    width: 100%;
+  
   }
   
   /* Event title */
@@ -212,6 +249,8 @@
     line-height: 1.3;
     text-align: left;
     flex: 1;
+    word-wrap: break-word;
+    hyphens: auto;
   }
   
   /* Collapse icon */
@@ -219,8 +258,10 @@
     font-size: 18px;
     color: rgba(255, 255, 255, 0.7);
     transition: transform 0.3s ease;
-    margin-right: 0px;
+    margin-right: 10px;
     flex-shrink: 0;
+    align-self: center;
+  
   }
   
   .agenda-collapse-icon.expanded {
@@ -272,7 +313,12 @@
     margin-bottom: 20px;
     margin-top: -30px;
   }
-  
+  .two-column-grid {
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  grid-auto-rows: 1fr;
+  }
   /* Responsive styles */
   @media (max-width: 768px) {
     .agenda-content {
@@ -300,6 +346,9 @@
     
     .agenda-event-title {
       font-size: 20px;
+    }
+    .two-column-grid {
+      grid-template-columns: 1fr;
     }
   }
   

@@ -412,8 +412,7 @@ const [animate, setAnimate] = useState(true);
         type:"Darede",
         time: "Instant Access",
         title: "Building a Scalable Event-Driven Architecture for Open Finance Brasil",
-        description:"In this talk, we will show how to create a high-performance application using ScyllaDB and Coroutines",
-        buttonText: "Explorer"
+        description:"In this talk, we will show how to create a high-performance application using ScyllaDB and Coroutines"
       },
       {
         id: "Instant Access-2",
@@ -541,9 +540,9 @@ const [animate, setAnimate] = useState(true);
       
     ]
   };
-useEffect(() => {
+ useEffect(() => {
     setTimeout(() => {
-      setAnimate(false); // Stop animation after 1 second
+      setAnimate(false);
     }, 1000);
   }, []);
   // Function to toggle event expansion
@@ -577,118 +576,148 @@ useEffect(() => {
       </span>
     ));
   };
-  const backgroundImageUrl = "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?auto=format&fit=crop&w=1920&q=80";
   return (
-    <div className="agenda-wrapper">
+    <motion.div className="home-container animated-space">
+     
+  <div className="stars">
+    {[...Array(50)].map((_, index) => (
       <motion.div
-        className="animated-background"
-        style={{ backgroundImage: `url(${backgroundImageUrl})` }}
-        initial={{ backgroundPosition: "0% 0%" }}
-        animate={animate ? { backgroundPosition: ["0% 0%", "100% 100%"] } : {}}
-        transition={{ 
-          duration: 20, 
-          ease: "linear", 
-          repeat: Infinity, 
-          repeatType: "reverse" 
+        key={index}
+        className="star"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: [0, 1, 0] }}
+        transition={{
+          duration: Math.random() * 3 + 1,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        style={{
+          left: `${Math.random() * 100}%`,
+          top: `${Math.random() * 100}%`,
         }}
       />
-      <div className="agenda-content">
-        <div className="agenda-header">
-          <h1>Agenda</h1>
-          <p>Session times are displayed in your local timezone.</p>
-          <p>Agenda subject to change.</p>
-        </div>
+    ))}
+  </div>
   
-        <div className="agenda-tabs">
-          <button 
-            className="agenda-tab"
-            onClick={() => scrollToDay('tuesday')}
-          >
-            <span className="tab-day">TUESDAY</span> <span className="tab-date" style={{border:"solid", borderWidth:"1px", borderColor:"white"}}>3/11</span>
-          </button>
-          <button 
-            className="agenda-tab"
-            onClick={() => scrollToDay('wednesday')}
-          >
-            <span className="tab-day">WEDNESDAY</span> <span className="tab-date" style={{border:"solid", borderWidth:"1px", borderColor:"white"}}>3/12</span>
-          </button>
-          <button className="agenda-tab no-date" onClick={() => scrollToDay('instant')}>
-            <span className="tab-day">INSTANT ACCESS</span>
-          </button>
-        </div>
-  {/*Tuesday section */}
-        <div ref={tuesdayRef} className="agenda-day-section">
-        <h2 className="day-title">Tuesday, March 11th, 2025</h2>
-        <div className="agenda-events" >
-          {agendaData.tuesday.map((event) => (
-            <div className="agenda-event-wrapper" key={event.id}>
+  <div className="floating-planets">
+    {[...Array(5)].map((_, index) => (
+      <motion.div
+        key={index}
+        className="planet"
+        initial={{ opacity: 0.8 }}
+        animate={{
+          y: [0, -30, 0],
+          rotate: [0, 360],
+          scale: [1, 1.1, 1],
+        }}
+        transition={{
+          duration: Math.random() * 5 + 3,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        style={{
+          left: `${Math.random() * 100}%`,
+          top: `${Math.random() * 100}%`,
+        }}
+      />
+    ))}
+  </div>
+  
+  <div className="agenda-content">
+    <div className="agenda-header">
+      <h1>Agenda</h1>
+      <p>Session times are displayed in your local timezone.</p>
+      <p>Agenda subject to change.</p>
+    </div>
+
+    <div className="agenda-tabs">
+      <button 
+        className="agenda-tab"
+        onClick={() => scrollToDay('tuesday')}
+      >
+        <span className="tab-day">TUESDAY</span> <span className="tab-date" style={{border:"solid", borderWidth:"1px", borderColor:"white"}}>3/11</span>
+      </button>
+      <button 
+        className="agenda-tab"
+        onClick={() => scrollToDay('wednesday')}
+      >
+        <span className="tab-day">WEDNESDAY</span> <span className="tab-date" style={{border:"solid", borderWidth:"1px", borderColor:"white"}}>3/12</span>
+      </button>
+      <button className="agenda-tab no-date" onClick={() => scrollToDay('instant')}>
+        <span className="tab-day">INSTANT ACCESS</span>
+      </button>
+    </div>
+
+    {/* Tuesday section - now with equal height cards */}
+    <div ref={tuesdayRef} className="agenda-day-section">
+      <h2 className="day-title">Tuesday, March 11th, 2025</h2>
+      <div className="agenda-events two-column-grid">
+        {agendaData.tuesday.map((event) => (
+          <div className="agenda-event-wrapper" key={event.id}>
+            <div className="agenda-event-card">
               <div className="time-badge">
                 <div className="agenda-time-label">
                   {event.time}
                 </div>
               </div>
-              <div className="agenda-event-card">
-                <div 
-                  className="agenda-event-header"
-                  onClick={() => toggleEvent(event.id)}
-                >
-                  <div className="agenda-event-author">{event.author}</div>
-                  <div className="agenda-event-type">{event.type}</div>
-                  <div className="agenda-event-title-row">
-                    <h3 className="agenda-event-title">{event.title}</h3>
-                    {event.description && (
-                      <div className={`agenda-collapse-icon ${expandedEvents[event.id] ? 'expanded' : ''}`}>
-                        &#x276F;
-                      </div>
-                    )}
-                  </div>
+              <div 
+                className="agenda-event-header"
+                onClick={() => toggleEvent(event.id)}
+              >
+                <div className="agenda-event-author">{event.author}</div>
+                <div className="agenda-event-type">{event.type}</div>
+                <div className="agenda-event-title-row">
+                  <h3 className="agenda-event-title">{event.title}</h3>
+                  {event.description && (
+                    <div className={`agenda-collapse-icon ${expandedEvents[event.id] ? 'expanded' : ''}`}>
+                      &#x276F;
+                    </div>
+                  )}
                 </div>
-                
-                {expandedEvents[event.id] && event.description && (
-                  <div className="agenda-event-description">
-                    {formatDescription(event.description)}
-                  </div>
-                )}
-                
-                {event.buttonText && (
-                  <div className="button-container">
-                    <button className="agenda-event-button">{event.buttonText}</button>
-                  </div>
-                )}
               </div>
+              
+              {expandedEvents[event.id] && event.description && (
+                <div className="agenda-event-description">
+                  {formatDescription(event.description)}
+                </div>
+              )}
+              
+              {event.buttonText && (
+                <div className="button-container">
+                  <button className="agenda-event-button">{event.buttonText}</button>
+                </div>
+              )}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-
-  
-        {/* Wednesday Section */}
-        <div ref={wednesdayRef} className="agenda-day-section">
+    </div>
+      {/* Wednesday Section */}
+      <div ref={wednesdayRef} className="agenda-day-section">
         <h2 className="day-title">Wednesday, March 12th, 2025</h2>
-        <div className="agenda-events">
+        <div className="agenda-events two-column-grid">
           {agendaData.wednesday.map((event) => (
             <div className="agenda-event-wrapper" key={event.id}>
-              <div className="time-badge">
-                <div className="agenda-time-label">
-                  {event.time}
-                </div>
-              </div>
               <div className="agenda-event-card">
+                <div className="time-badge">
+                  <div className="agenda-time-label">
+                    {event.time}
+                  </div>
+                </div>
                 <div 
                   className="agenda-event-header"
                   onClick={() => toggleEvent(event.id)}
                 >
                   <div className="agenda-event-content">
-                      <div className="agenda-event-author">{event.author || ''}</div>
-                      <div className="agenda-event-type">{event.type || ''}</div>
-                      <h3 className="agenda-event-title">{event.title}</h3>
-                    </div>
-                    {event.description && (
-                      <span className={`agenda-collapse-icon ${expandedEvents[event.id] ? 'expanded' : ''}`}>
-                        &#x276F;
-                      </span>
-                    )}
-
+                    <div className="agenda-event-author">{event.author || ''}</div>
+                    <div className="agenda-event-type">{event.type || ''}</div>
+                    <h3 className="agenda-event-title">{event.title}</h3>
+                  </div>
+                  {event.description && (
+                    <span className={`agenda-collapse-icon ${expandedEvents[event.id] ? 'expanded' : ''}`}>
+                      &#x276F;
+                    </span>
+                  )}
                 </div>
                 
                 {expandedEvents[event.id] && event.description && (
@@ -707,21 +736,20 @@ useEffect(() => {
           ))}
         </div>
       </div>
-
   
-        {/* Instant Access Section */}
-        <div ref={instantRef} className="agenda-day-section">
+      {/* Instant Access Section */}
+      <div ref={instantRef} className="agenda-day-section">
         <h2 className="day-title">Instant Access</h2>
         <span className="day-sub" style={{color:"#cccccc"}}>These sessions will be available throughout the conference.</span>
-        <div className="agenda-events">
+        <div className="agenda-events two-column-grid">
           {agendaData.instant.map((event) => (
             <div className="agenda-event-wrapper" key={event.id}>
-              <div className="time-badge">
-                <div className="agenda-time-label">
-                  {event.time}
-                </div>
-              </div>
               <div className="agenda-event-card">
+                <div className="time-badge">
+                  <div className="agenda-time-label">
+                    {event.time}
+                  </div>
+                </div>
                 <div 
                   className="agenda-event-header"
                   onClick={() => toggleEvent(event.id)}
@@ -754,9 +782,9 @@ useEffect(() => {
           ))}
         </div>
       </div>
-
-      </div>
+  
     </div>
+  </motion.div>
   );
 }
 
