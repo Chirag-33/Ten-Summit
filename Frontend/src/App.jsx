@@ -11,6 +11,7 @@ import TermsAndServices from "./pages/TermsAndServices";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ContactUs from "./pages/ContactUs";
 import Agenda from './pages/Agenda'
+import Footer from "./pages/Footer";
 function App() {
   return (
     <BrowserRouter>
@@ -28,6 +29,7 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
+      {/* <Footer/> */}
     </BrowserRouter>
   );
 }
