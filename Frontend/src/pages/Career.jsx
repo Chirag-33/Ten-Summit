@@ -236,7 +236,7 @@ const Career = () => {
         className="md:flex md:flex-row md:justify-center md:items-center flex flex-col justify-center items-center gap-8 text-center border text-lg font-stretch-semi-condensed p-4"
         id="bottom-cards"
       >
-        <div className="border border-gradient p-6 w md:w-74 gradient-border">
+        <div className="border border-gradient p-6 w md:w-95 gradient-border">
           <div>
             <div className="flex justify-center items-center">
               <img src={newsroom} width={50} height={50} alt="" />
@@ -249,7 +249,7 @@ const Career = () => {
           </div>
         </div>
 
-        <div className="border p-6 md:w-74 gradient-border">
+        <div className="border p-6 md:w-95 gradient-border">
           <div>
             <div className="flex justify-center items-center">
               <img src={blog} width={50} height={50} alt="" />
@@ -262,7 +262,7 @@ const Career = () => {
           </div>
         </div>
 
-        <div className="border p-6 md:w-74 rounded-t-md gradient-border">
+        <div className="border p-6 md:w-95 rounded-t-md gradient-border">
           <div>
             <div className="flex justify-center items-center">
               <img src={phone} width={50} height={50} alt="" className="mr-2" />
