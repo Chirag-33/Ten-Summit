@@ -1,23 +1,21 @@
 * {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  margin: 0;
-  padding: 0;
+  /* margin: 0; */
+  /* padding: 0; */
   box-sizing: border-box;
 }
 
-
 /* Header Section */
 .image {
-  background: linear-gradient(to top, #0d3792, #0F1040);
+  background: linear-gradient(to top, #0d3792, #0f1040);
   margin: 0 auto;
   line-height: 1.5;
   text-align: center;
   padding: 20px 0;
- display: flex;
+  display: flex;
 
- flex-direction: column;
- 
+  flex-direction: column;
 }
 
 .image h1 {
@@ -28,7 +26,7 @@
 }
 
 /* Image Styling */
-img {
+.image .card .contact-conatianer img {
   height: 300px;
   max-width: 100%;
   object-fit: contain;
@@ -36,14 +34,10 @@ img {
 
 /* Tab Navigation */
 .toggle-container {
- 
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px 0;
-  
-
- 
 }
 
 .toggle {
@@ -54,8 +48,7 @@ img {
   background: #eaf3ff;
   border: 2px solid #007bff;
   border-radius: 50px;
-  padding:15px;
-  
+  padding: 15px;
 }
 
 .toggle button {
@@ -64,7 +57,7 @@ img {
   background: none;
   font-size: 18px;
   color: #555;
-  padding: 10px ;
+  padding: 10px;
   cursor: pointer;
   font-weight: 400;
   position: relative;
@@ -73,12 +66,9 @@ img {
 
 .toggle button.active {
   color: #007bff;
-  
-  
 }
 
 .slider1 {
-  
   position: absolute;
   width: 250px;
   height: 40px;
@@ -86,7 +76,6 @@ img {
   border-radius: 20px;
   transition: 0.3s;
   border: 2px solid #007bff;
-  
 }
 
 .slider1.left {
@@ -98,7 +87,6 @@ img {
   left: 46%;
   top: 17px;
 }
-
 
 /* Card Styling */
 .card {
@@ -112,14 +100,14 @@ img {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   text-align: left;
   cursor: pointer;
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
 }
 
 .card img {
   width: 100%;
   height: 150px;
-  
+
   object-fit: contain;
   border-radius: 5px;
 }
@@ -127,12 +115,10 @@ img {
 .card p {
   color: #333;
   padding: 20px 0;
-
 }
 .card h3 {
   color: #333;
   padding: 20px 0;
-
 }
 
 .card:hover {
@@ -168,143 +154,122 @@ img {
   justify-content: center;
   padding: 0 20px;
 }
-.contact-conatianer{
+.contact-conatianer {
   background-color: #007bff;
   margin-top: 200px;
- 
+
   display: flex;
   justify-content: center;
- 
 }
 .contact-card {
   position: relative;
 
   bottom: 150px;
   background-color: #fbfcfc;
-   width: 40%;
-   border: thin solid #c6c2c2;
-   margin: 20px;
+  width: 40%;
+  border: thin solid #c6c2c2;
+  margin: 20px;
 
-   border-radius: 10px;
-   display: flex;
-   flex-direction: column;
-   
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 .contact-card a {
   color: white;
-  background-color: #0F1040;
+  background-color: #0f1040;
   text-decoration: none;
   font-size: 20px;
-  margin:0px 150px 50px 150px;
- word-spacing: 3px;
+  margin: 0px 150px 50px 150px;
+  word-spacing: 3px;
   padding: 10px 0px;
   font-size: 16px;
   word-wrap: break-word;
   overflow-wrap: break-word;
   max-width: 100%;
-
-
 }
-.contact-card .btn{
-  margin:0 100px
+.contact-card .btn {
+  margin: 0 100px;
 }
 .contact-card a:hover {
-  background-color:white;
-  color: #0F1040;
-  border:solid 1px #0F1040;
+  background-color: white;
+  color: #0f1040;
+  border: solid 1px #0f1040;
   text-decoration: none;
 }
-.contact-card img{
- position: relative;
- bottom: 60px;
- left: 150px;
-
-
+.contact-card img {
+  position: relative;
+  bottom: 60px;
+  left: 150px;
 }
-.contact-card .img1{
+.contact-card .img1 {
   position: relative;
   bottom: 60px;
   left: 200px;
- 
- }
-.contact-card h3{
+}
+.contact-card h3 {
   font-size: 30px;
   position: relative;
   bottom: 50px;
   font-weight: 400;
-  
+
   color: #333;
- }
- .contact-card p{
+}
+.contact-card p {
   position: relative;
   bottom: 40px;
   font-weight: 00;
   font-size: 20px;
   color: black;
- 
- }
- 
- .press-container{
+}
+
+.press-container {
   border: thin solid #c6c2c2;
   text-align: left;
   padding: 0px 70px;
   margin: 50px 150px;
- 
-  
- }
- .press-release-item{
+}
+.press-release-item {
   display: flex;
   flex-direction: column;
   gap: 20px;
-
- }
- .press-release-item  a{
-  
+}
+.press-release-item a {
   text-decoration: none;
-  color:#454242; 
-  font-weight:300;
+  color: #454242;
+  font-weight: 300;
   font-size: 24px;
-   
- 
-  
-
- }
- .press-release-item  h3{
+}
+.press-release-item h3 {
   padding: 20px 0;
- }
- .press-release-item  hr{
- border:solid 1px rgb(198, 197, 197);
- }
+}
+.press-release-item hr {
+  border: solid 1px rgb(198, 197, 197);
+}
 
- .post-date{
-  color: #0F1040;
+.post-date {
+  color: #0f1040;
   font-size: 14px;
-  padding-top: 50px ;
-  
- }
- .press-release-item  a:hover{
+  padding-top: 50px;
+}
+.press-release-item a:hover {
   text-decoration: none;
- }
+}
 
- 
- @media (max-width: 768px) {
-  .contact-card img{
+@media (max-width: 768px) {
+  .contact-card img {
     position: relative;
     bottom: 60px;
     left: 100px;
-   
-   }
-   .contact-card .img1{
+  }
+  .contact-card .img1 {
     position: relative;
     bottom: 60px;
     left: 140px;
-   
-   }
+  }
   .contact-card {
     width: 90%;
-   
   }
-  .contact-conatianer{
+  .contact-conatianer {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -316,30 +281,23 @@ img {
     left: 16px;
     top: 14px;
   }
-  
+
   .slider1.right {
     left: 49%;
     top: 14px;
-  
   }
-  .slider1{
+  .slider1 {
     width: 180px;
   }
-
-
-  
 }
 @media (max-width: 1024px) {
   .contact-card {
     max-width: 60%;
   }
-  
 }
 
-
-
 @media (max-width: 480px) {
-  .toggle{
+  .toggle {
     width: 250px;
   }
   .toggle button {
@@ -352,9 +310,8 @@ img {
   .p1 {
     font-size: 18px;
   }
-  .contact-conatianer{
- 
-   align-items: center;
+  .contact-conatianer {
+    align-items: center;
   }
   .contact-card {
     max-width: 90%;
@@ -364,41 +321,31 @@ img {
   }
   .contact-card .btn {
     margin: 0 50px 20px 50px;
- }
- .contact-card p{
-  margin: 0 20px;
- }
+  }
+  .contact-card p {
+    margin: 0 20px;
+  }
   .slider.left {
     left: 16px;
     top: 14px;
   }
-  
+
   .slider1.right {
     left: 50%;
     top: 16px;
-  
   }
-  .slider1{
+  .slider1 {
     width: 110px;
-    
   }
-  .press-container{
-    margin: 20px ;
-    padding:  0 25PX;
+  .press-container {
+    margin: 20px;
+    padding: 0 25px;
     border: thin solid #c6c2c2;
     text-align: left;
-   
   }
   .press-container a {
     font-size: 20px;
     word-break: break-word;
     max-width: 100%;
-    
-    
   }
-
-  
-  
- 
-
 }
