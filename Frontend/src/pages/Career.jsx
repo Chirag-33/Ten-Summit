@@ -224,7 +224,7 @@ const Career = () => {
           </p>
           <div className="mx-auto text-center mt-6">
             {" "}
-            <button className="bg-blue-950 text-white px-10 text-lg py-2 mb-12">
+            <button className="bg-blue-950 text-white px-10 text-lg py-2 mb-12 md:transition md:duration-300 md:ease-in-out md:hover:bg-indigo-800">
               Browse Open Positions <span>→</span>
             </button>
           </div>
