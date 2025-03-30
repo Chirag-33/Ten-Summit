@@ -1,78 +1,81 @@
 /* Navbar Container */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 10px;
-    background-color: #121212;
-    color: white;
-  }
-  
-  /* Logo */
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  /* Menu Items */
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-  }
-  
-  /* Register Button */
-  .register-btn {
-    border-radius: 50px;
-    border: 2px solid #326DE6;
-    transition-behavior: normal;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
-    transition-property: all;
-    padding: 10px 20px;
-    background: transparent;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  /* Hamburger Icon */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #121212;
+  color: white;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Menu Items */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  align-items: center; /* Add this to center all items vertically */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  display: flex; /* Add this */
+  align-items: center; /* Add this to center the text vertically */
+  height: 100%; /* Take full height of parent */
+}
+
+/* Register Button */
+.register-btn {
+  border-radius: 50px;
+  border: 2px solid #326DE6;
+  transition: all 0.3s ease-in-out;
+  padding: 10px 20px;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
   .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
     display: none;
-    font-size: 1.8rem;
-    cursor: pointer;
+    flex-direction: column;
+    background-color: #121212;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    gap: 0; /* Remove gap for mobile */
   }
-  
-  /* Responsive Navbar */
-  @media (max-width: 768px) {
-    .menu-icon {
-      display: block;
-    }
-  
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      background-color: #121212;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      width: 100%;
-      text-align: center;
-    }
-  
-    .nav-links.active {
-      display: flex;
-    }
-  
-    .nav-links li {
-      padding: 10px 0;
-    }
+
+  .nav-links.active {
+    display: flex;
   }
-  
+
+  .nav-links li {
+    padding: 15px 0; /* Increase padding for better touch targets */
+  }
+}
