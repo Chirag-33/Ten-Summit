@@ -22,6 +22,8 @@ function Team() {
                         </div>
                         <div className='elementor2'>
                             <img src="https://www.scylladb.com/wp-content/uploads/monster-company-hero-1.svg" alt="ScyllaDB Mascot" />
+                        </div>
+                        <div className='elementor3' style={{marginLeft:"800px"}}>
                             <img src="https://www.scylladb.com/wp-content/uploads/monster-company-hero-3.svg" alt="ScyllaDB Mascot" />
                         </div>
                     </div>
