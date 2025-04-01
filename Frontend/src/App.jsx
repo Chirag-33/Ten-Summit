@@ -12,6 +12,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ContactUs from "./pages/ContactUs";
 import Agenda from './pages/Agenda'
 import Footer from "./pages/Footer";
+import AgendaList from "./pages/AgendaList";
 function App() {
   return (
     <BrowserRouter>
@@ -28,6 +29,7 @@ function App() {
         <Route path="/terms" element={<TermsAndServices />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/AgendaList" element={<AgendaList />} />
       </Routes>
       {/* <Footer/> */}
     </BrowserRouter>
