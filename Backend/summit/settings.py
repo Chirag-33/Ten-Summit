@@ -58,7 +58,6 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'corsheaders',
     'summit_app',
-    'api',
 ]
 
 CORS_ALLOWED_ORIGINS = ['http://localhost:5174']
