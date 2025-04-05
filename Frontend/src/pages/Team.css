@@ -258,6 +258,18 @@ body {
   padding: 0 10px;
 }
 
+@media (width: 768px) {
+  .elementor-team-content-container{
+    justify-content: left;
+    margin-left: 60px;
+  
+    
+  }
+}
+
+
+
+
 .elementor-team-content {
   width: 100%;
   max-width: 280px;
@@ -267,17 +279,21 @@ body {
   border: 1px solid rgb(22, 48, 181);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  
 }
 
 @media (min-width: 576px) {
   .elementor-team-content {
     width: calc(50% - 20px);
+    
   }
 }
 
 @media (min-width: 992px) {
   .elementor-team-content {
     width: calc(25% - 20px);
+  
+    
   }
 }
 
