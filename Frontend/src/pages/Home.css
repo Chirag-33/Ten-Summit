@@ -212,6 +212,7 @@ h5.session-preview__speaker-info {
 
 .all-section-card img {
   height: auto;
+  width: 100%;
   border-radius: 16px 16px 0 0;
 }
 

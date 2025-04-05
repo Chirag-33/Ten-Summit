@@ -109,7 +109,7 @@ const sectionsData = [
     subtitle: "Daniel White",
     newtitle: "ML Engineer at DeepData",
     description: "How machine learning models are integrated into web applications to provide personalized experiences...",
-    imgSrc: "https://brightdata.com/wp-content/uploads/2024/11/How-to-Use-Web-Scraping-for-Machine-Learning.svg",
+    imgSrc: "https://designindc.com/wp-content/uploads/2022/12/Machine-Learning.jpg",
   },
   {
     id: 15,
