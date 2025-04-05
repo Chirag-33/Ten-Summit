@@ -58,7 +58,6 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'corsheaders',
     'summit_app',
-    'api',
 ]
 
 CORS_ALLOWED_ORIGINS = ['http://localhost:5174']
@@ -80,8 +79,7 @@ ROOT_URLCONF = 'summit.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["templates"],
-        # 'DIRS': [],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -183,7 +181,7 @@ LOGIN_REDIRECT_URL = '/api/get_token'  # Or any other valid URL
 SOCIALACCOUNT_LOGIN_ON_GET = False   
 
 EMAIL_HOST="smtp.gmail.com"
-EMAIL_HOST_USER= os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_USER= os.getenv('EMAIL_HOST_MAIL')
 EMAIL_HOST_PASSWORD= os.getenv('EMAIL_HOST_PASSWORD')
 EMAIL_PORT="587"
 EMAIL_USE_TLS=True

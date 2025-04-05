@@ -8,6 +8,5 @@ urlpatterns = [
     path('', include('summit_app.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('api/', include('api.urls')),
     path('react-app/', TemplateView.as_view(template_name='index.html')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
