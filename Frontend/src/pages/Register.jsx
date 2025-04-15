@@ -8,8 +8,7 @@ const jobRoles = [
   "Data Scientist", "Student", "Other", "Operations Manager"
 ];
 
-// eslint-disable-next-line react/prop-types
-const RegistrationModal = ({ onClose }) => {
+const RegistrationModal = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -21,6 +20,7 @@ const RegistrationModal = ({ onClose }) => {
   });
 
   const [countries, setCountries] = useState([]);
+  const [isVisible, setIsVisible] = useState(true); // 🆕 State to toggle modal visibility
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -52,10 +52,16 @@ const RegistrationModal = ({ onClose }) => {
     console.log("Form Data Submitted:", formData);
   };
 
+  const handleClose = () => {
+    setIsVisible(false);
+  };
+
+  if (!isVisible) return null; // 🧼 Hide the component entirely
+
   return (
     <div className="modal-container">
       <div className="modal-box">
-        <button className="close-btn" onClick={onClose} style={{ color: "blue" }}>
+        <button className="close-btn" onClick={handleClose} style={{ color: "blue" }}>
           &times;
         </button>
         <h2 className="modal-title">
