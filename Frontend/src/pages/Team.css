@@ -2,16 +2,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   background-color: #0f1040;
   font-family: "Poppins", sans-serif;
-  color: #fff;
+  /* color: #fff */
   width: 100%;
   overflow-x: hidden;
 }
@@ -73,7 +67,9 @@ body {
   width: 100%;
 }
 
-.elementor1, .elementor2, .elementor3 {
+.elementor1,
+.elementor2,
+.elementor3 {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -111,7 +107,7 @@ body {
   margin-right: 150px;
 }
 
-.elementor3  img {
+.elementor3 img {
   width: 160px;
   max-width: 100%;
   height: auto;
@@ -125,16 +121,17 @@ body {
     align-items: center; /* Center items horizontally */
     width: 100%;
   }
-  
+
   .investor-team-sub-heading2 {
     margin-bottom: 0; /* Remove negative margin */
   }
-  
+
   /* Hide elementor1 and elementor2 on mobile */
-  .elementor1, .elementor2 {
+  .elementor1,
+  .elementor2 {
     display: none;
   }
-  
+
   /* Keep elementor3 visible and position it at the end */
   .elementor3 {
     display: flex;
@@ -144,11 +141,11 @@ body {
     order: 2; /* Move to the end of the flex container */
     margin-top: 30px; /* Add some space above */
   }
-  
+
   .elementor3 > img {
     width: 120px; /* Slightly smaller on mobile */
   }
-  
+
   .investor-team-sub-heading1,
   .investor-team-sub-heading2,
   .investor-team-heading {
@@ -259,16 +256,11 @@ body {
 }
 
 @media (width: 768px) {
-  .elementor-team-content-container{
+  .elementor-team-content-container {
     justify-content: left;
     margin-left: 60px;
-  
-    
   }
 }
-
-
-
 
 .elementor-team-content {
   width: 100%;
@@ -279,21 +271,17 @@ body {
   border: 1px solid rgb(22, 48, 181);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  
 }
 
 @media (min-width: 576px) {
   .elementor-team-content {
     width: calc(50% - 20px);
-    
   }
 }
 
 @media (min-width: 992px) {
   .elementor-team-content {
     width: calc(25% - 20px);
-  
-    
   }
 }
 
@@ -677,7 +665,7 @@ body {
     width: 100vw;
     overflow-x: hidden;
   }
-  
+
   .investor-team-container,
   .elementor-para-img-container,
   .elementor-card-container-head,
@@ -688,18 +676,18 @@ body {
     padding: 5px;
     width: 100%;
   }
-  
+
   .investor-team-sub-heading1,
   .investor-team-sub-heading2 {
     width: 100%;
     padding: 20px 10px 0;
   }
-  
+
   .elementor-main {
     padding: 0;
     width: 100%;
   }
-  
+
   .elementor-para > p {
     padding: 60px 10px;
   }
