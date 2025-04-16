@@ -10,8 +10,8 @@ import Career from "./pages/Career";
 import TermsAndServices from "./pages/TermsAndServices";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ContactUs from "./pages/ContactUs";
-import Agenda from './pages/Agenda'
-import Footer from "./pages/Footer";
+import Agenda from "./pages/Agenda";
+// import Footer from "./pages/Footer";
 import AgendaList from "./pages/AgendaList";
 function App() {
   return (
