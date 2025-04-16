@@ -94,7 +94,7 @@ const Career = () => {
         {!isMobile && (
           <div className="relative w-full overflow-hidden p-4 mb-8">
             <div
-              className="flex transition-transform duration-700 ease-linear gap-0 md:-ml-19"
+              className="flex transition-transform duration-700 ease-linear gap-0 md:-ml-10"
               style={{
                 transform: `translateX(-${
                   (currentIndex % images.length) * 33.33
