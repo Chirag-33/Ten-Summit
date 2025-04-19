@@ -11,7 +11,7 @@ import TermsAndServices from "./pages/TermsAndServices";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ContactUs from "./pages/ContactUs";
 import Agenda from "./pages/Agenda";
-// import Footer from "./pages/Footer";
+import Footer from "./pages/Footer";
 import AgendaList from "./pages/AgendaList";
 function App() {
   return (
@@ -31,7 +31,7 @@ function App() {
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/AgendaList" element={<AgendaList />} />
       </Routes>
-      {/* <Footer/> */}
+      <Footer/>
     </BrowserRouter>
   );
 }
