@@ -7,7 +7,7 @@ function Agenda() {
   const instantRef = useRef(null);
   // State to track expanded/collapsed events
   const [expandedEvents, setExpandedEvents] = useState({});
-const [animate, setAnimate] = useState(true);
+const [, setAnimate] = useState(true);
   // Initial agenda data (unchanged)
   const agendaData = {
     "tuesday": [
