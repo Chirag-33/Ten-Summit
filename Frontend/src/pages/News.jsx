@@ -1,718 +1,331 @@
-import React, { useState } from "react";
-import img from "../assets/images/newspage-illu-1-1.webp";
+"use client"
 
-import "./news.css";
-import { newsData } from "../assets/data/news_data.js";
+import { useState } from "react"
+import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
+
+// Sample news data
+const newsData = [
+  {
+    id: 1,
+    title: "New Monster Ten Release Delivers Unprecedented Elasticity & Efficiency via 'Tablets' Architecture",
+    date: "December 3, 2024",
+    image: "/images/news-1.jpg",
+    source: "TechCrunch",
+    sourceImage: "/images/techcrunch-logo.png",
+    category: "news",
+  },
+  {
+    id: 2,
+    title: "Monster Ten Announces 6.0 Release for True Elastic Scale",
+    date: "June 12, 2024",
+    image: "/images/news-2.jpg",
+    source: "VentureBeat",
+    sourceImage: "/images/venturebeat-logo.png",
+    category: "press",
+  },
+  {
+    id: 3,
+    title: "Monster Ten Release Achieves 50% Higher Throughput, 33% Lower Latency",
+    date: "February 20, 2024",
+    image: "/images/news-3.jpg",
+    source: "InfoWorld",
+    sourceImage: "/images/infoworld-logo.png",
+    category: "press",
+  },
+  {
+    id: 4,
+    title: "Monster Ten Named Fastest Growing NoSQL Database on Deloitte Fast 500 List",
+    date: "November 14, 2023",
+    image: "/images/news-4.jpg",
+    source: "Forbes",
+    sourceImage: "/images/forbes-logo.png",
+    category: "news",
+  },
+  {
+    id: 5,
+    title: "Monster Ten Raises $43M to Take on MongoDB at Scale, Push Database Performance to New Levels",
+    date: "October 17, 2023",
+    image: "/images/news-5.jpg",
+    source: "TechCrunch",
+    sourceImage: "/images/techcrunch-logo.png",
+    category: "news",
+  },
+  {
+    id: 6,
+    title: "Monster Ten Wins Google Cloud Customer of the Year Award",
+    date: "August 29, 2023",
+    image: "/images/news-6.jpg",
+    source: "Google Cloud Blog",
+    sourceImage: "/images/google-cloud-logo.png",
+    category: "press",
+  },
+  {
+    id: 7,
+    title: "Monster Ten Announces NoSQL Release With Raft for Strong Consistency",
+    date: "August 22, 2023",
+    image: "/images/news-7.jpg",
+    source: "ZDNet",
+    sourceImage: "/images/zdnet-logo.png",
+    category: "press",
+  },
+  {
+    id: 8,
+    title: "ZEE5 Moves to Monster Ten NoSQL to Enhance User Experience at Scale with Predictable Costs",
+    date: "May 23, 2023",
+    image: "/images/news-8.jpg",
+    source: "Business Insider",
+    sourceImage: "/images/business-insider-logo.png",
+    category: "news",
+  },
+]
+
+// Sample press releases
+const pressReleases = [
+  {
+    id: 1,
+    title: "New Monster Ten Release Delivers Unprecedented Elasticity & Efficiency via 'Tablets' Architecture",
+    date: "December 3, 2024",
+  },
+  {
+    id: 2,
+    title: "Monster Ten Announces 6.0 Release for True Elastic Scale",
+    date: "June 12, 2024",
+  },
+  {
+    id: 3,
+    title: "New Monster Ten Release Achieves 50% Higher Throughput, 33% Lower Latency",
+    date: "February 20, 2024",
+  },
+  {
+    id: 4,
+    title: "Monster Ten Named Fastest Growing NoSQL Database on Deloitte Fast 500 List for the Second Consecutive Year",
+    date: "November 14, 2023",
+  },
+  {
+    id: 5,
+    title: "Monster Ten Raises $43M to Take on MongoDB at Scale, Push Database Performance to New Levels",
+    date: "October 17, 2023",
+  },
+  {
+    id: 6,
+    title: "Monster Ten Wins Google Cloud Customer of the Year Award",
+    date: "August 29, 2023",
+  },
+  {
+    id: 7,
+    title: "Monster Ten Announces NoSQL Release With Raft for Strong Consistency",
+    date: "August 22, 2023",
+  },
+  {
+    id: 8,
+    title: "ZEE5 Moves to Monster Ten NoSQL to Enhance User Experience at Scale with Predictable Costs",
+    date: "May 23, 2023",
+  },
+  {
+    id: 9,
+    title: "Monster Ten Adds Jon Bakke of MariaDB to its Leadership Team, Supporting Rapid DBaaS Growth",
+    date: "April 18, 2023",
+  },
+  {
+    id: 10,
+    title: "Monster Ten Continues Record Growth in Response to Rising Cloud Cost Pressures",
+    date: "February 28, 2023",
+  },
+]
 
 export default function News() {
-  const [activeTab, setActiveTab] = useState("news");
+  const [activeTab, setActiveTab] = useState("news")
+
   return (
-    <>
-      <div className="image">
-        <h1>ScyllaDB in the News</h1>
-        <img src={img} alt="" />
-      </div>
-      <div className="toggle-container">
-        <div className="toggle">
-          <div
-            className={`slider1 ${activeTab === "news" ? "left" : "right"}`}
-          ></div>
-          <button
-            className={activeTab === "news" ? "active" : ""}
-            onClick={() => setActiveTab("news")}
+    <div className="min-h-screen bg-gradient-to-b from-blue-950 via-indigo-950 to-black pt-24 pb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="relative mb-12">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
           >
-            In The News
-          </button>
-          <button
-            className={activeTab === "press" ? "active" : ""}
-            onClick={() => setActiveTab("press")}
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Monster Ten in the News</h1>
+          </motion.div>
+
+          <motion.div
+            className="relative h-48 md:h-64 lg:h-80 rounded-xl overflow-hidden mb-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Press Releases
-          </button>
+            <img src="/images/news-header.jpg" alt="News Header" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-indigo-950 to-transparent opacity-70"></div>
+          </motion.div>
         </div>
-      </div>
-      <div>
-        {activeTab === "press" ? (
-          <div className="press-container">
+
+        {/* Tabs */}
+        <motion.div
+          className="flex justify-center mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <div className="relative bg-indigo-900/50 backdrop-blur-sm rounded-full p-1 flex w-full max-w-xs">
             <div
-              data-paged="1"
-              className="press-releases-list__wrapper load-posts no-posts"
+              className={`absolute top-1 bottom-1 ${activeTab === "news" ? "left-1" : "right-1"} w-[calc(50%-2px)] bg-indigo-600 rounded-full transition-all duration-300`}
+            ></div>
+            <button
+              className={`relative z-10 w-1/2 py-2 text-center rounded-full transition-colors duration-300 ${activeTab === "news" ? "text-white" : "text-indigo-300"}`}
+              onClick={() => setActiveTab("news")}
             >
-              <div className="press-release-item">
-                <div className="post-date">December 3, 2024</div>
-                <h3>
-                  <a href="#">
-                    New ScyllaDB Release Delivers Unprecedented Elasticity &amp;
-                    Efficiency via “Tablets” Architecture
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">June 12, 2024</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces 6.0 Release for True Elastic Scale
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">February 20, 2024</div>
-                <h3>
-                  <a href="#">
-                    New ScyllaDB Release Achieves 50% Higher Throughput, 33%
-                    Lower Latency
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">November 14, 2023</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Named Fastest Growing NoSQL Database on Deloitte
-                    Fast 500 List for the Second Consecutive Year
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">October 17, 2023</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Raises $43M to Take on MongoDB at Scale, Push
-                    Database Performance to New Levels
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">August 29, 2023</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Wins Google Cloud Customer of the Year Award
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">August 22, 2023</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces NoSQL Release With Raft for Strong
-                    Consistency
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">May 23, 2023</div>
-                <h3>
-                  <a href="#">
-                    ZEE5 Moves to ScyllaDB NoSQL to Enhance User Experience at
-                    Scale with Predictable Costs
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">April 18, 2023</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Adds Jon Bakke of MariaDB to its Leadership Team,
-                    Supporting Rapid DBaaS Growth
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">February 28, 2023</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Continues Record Growth in Response to Rising Cloud
-                    Cost Pressures
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">December 13, 2022</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Teams up with Intel to Achieve Staggering NoSQL
-                    Performance with 3rd Gen Intel Xeon Scalable Processors
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">November 30, 2022</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Expands Leadership Team with Red Hat Veteran Amidst
-                    Rapid Growth
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">November 16, 2022</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Ranked as one of the Fastest-Growing Companies in
-                    North America on the 2022 Deloitte Technology Fast 500™
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">September 28, 2022</div>
-                <h3>
-                  <a href="#">
-                    Uber, Lyft, Square, ScyllaDB &amp; Google Engineers on the
-                    P99 CONF Agenda
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">July 12, 2022</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces ScyllaDB V, Addressing Legacy NoSQL
-                    Challenges
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">May 12, 2022</div>
-                <h3>
-                  <a href="#">
-                    Responding to Rapid Database-as-a-Service Adoption, ScyllaDB
-                    Launches Customer Advisory Board
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">April 28, 2022</div>
-                <h3>
-                  <a href="#/">
-                    ScyllaDB Gives Customers Higher NoSQL Performance with
-                    Support for new Amazon EC2 I4i Instances
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">April 13, 2022</div>
-                <h3>
-                  <a href="#">
-                    Monstrously Fast + Scalable NoSQL Database, ScyllaDB, Now
-                    Available on AWS Marketplace
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">February 16, 2022</div>
-                <h3>
-                  <a href="#">
-                    Top NoSQL Innovators Honored with ScyllaDB Awards
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">January 25, 2022</div>
-                <h3>
-                  <a href="#">
-                    Cloud Database Demand Spurs 198% Growth for ScyllaDB
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">November 30, 2021</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Joins AWS ISV Accelerate Program to Scale
-                    Data-Intensive Applications
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">August 11, 2021</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Appoints SaaS Strategy Executive Wayne Ariola as
-                    Chief Marketing Officer
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">August 4, 2021</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces NoSQL Database as a Service Now Available
-                    on Google Cloud
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">July 27, 2021</div>
-                <h3>
-                  <a href="#">
-                    For Developers Only: ScyllaDB Announces P99 CONF Speaker
-                    Lineup
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">June 16, 2021</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces Comprehensive Support for Apache Kafka
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">May 20, 2021</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces ScyllaDB Enterprise 2021 NoSQL Database
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">April 27, 2021</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces SOC 2 Certification for NoSQL
-                    Database-as-a-Service
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">January 13, 2021</div>
-                <h3>
-                  <a href="#">
-                    Innovative Spirit Shines at 2021 ScyllaDB User Awards
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">January 12, 2021</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Unveils ‘Monstrous’ New Capabilities for its NoSQL
-                    Database
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">January 6, 2021</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Summit 2021 Ready to Kick Off Largest Program Ever
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">September 30, 2020</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Hires Experienced NoSQL and Open Source Growth
-                    Leader Randall Jackson as Chief Revenue Officer
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">September 15, 2020</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces ScyllaDB Cloud is AWS Outposts Ready
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">September 2, 2020</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Unveils One-Step Migration from Amazon DynamoDB to
-                    ScyllaDB NoSQL Database
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">August 19, 2020</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces ScyllaDB Enterprise 2020 NoSQL Database
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">July 22, 2020</div>
-                <h3>
-                  <a href="#">
-                    Discord Chooses ScyllaDB as Its Core Storage Layer
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">June 10, 2020</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Adds Amazon DynamoDB-compatible API to
-                    Database-as-a-Service Offering
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">May 7, 2020</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces 4.0 Release of Its Open Source NoSQL
-                    Database
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">February 18, 2020</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Extends Support for Streaming with High-Performance
-                    Apache Kafka<sup>TM</sup> Connector
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">February 11, 2020</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Enterprise Named a Winner in InfoWorld Technology
-                    of the Year Awards
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">November 6, 2019</div>
-                <h3>
-                  <a href="#">
-                    Comcast, Numberly, FireEye Among Winners of 2019 ScyllaDB
-                    User Awards
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">November 5, 2019</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Unveils Highly Anticipated Features for
-                    High-Performance NoSQL Database
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">November 5, 2019</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Smashes Performance Record, Hits 1,000,000,000 RPS
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">October 11, 2019</div>
-                <h3>
-                  <a href="#">
-                    Logistics Leader GetSwift Delivers with ScyllaDB Enterprise
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">September 11, 2019</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces Alternator, an Open Source Amazon
-                    DynamoDB-Compatible API
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">September 11, 2019</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Secures $25 Million to Open Source Amazon
-                    DynamoDB-compatible API
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">August 28, 2019</div>
-                <h3>
-                  <a href="#">Super App Grab Partners with ScyllaDB</a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">May 14, 2019</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB NoSQL Breakthrough Slashes the Costs of Big Data
-                    Applications
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">May 8, 2019</div>
-                <h3>
-                  <a href="#">
-                    IoT Pioneers Turn to ScyllaDB for Low Latency,
-                    Out-of-the-Box Performance at Scale
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">May 2, 2019</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Summit Returns to San Francisco November 2019
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">May 1, 2019</div>
-                <h3>
-                  <a href="#">
-                    Ad-Tech Leaders Power Real-Time Big Data Platforms with
-                    ScyllaDB NoSQL Database
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">April 9, 2019</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Launches ScyllaDB Cloud Database as a Service
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">February 27, 2019</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Launches Free Online Learning Resource for Users of
-                    Its Powerful NoSQL Database
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">February 5, 2019</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Makes Enterprise Cluster Administration and Task
-                    Automation Tool Available to ScyllaDB Open Source Users
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">November 7, 2018</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces Winners of the 2018 ScyllaDB User Awards
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">November 6, 2018</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces Major Release of Its NoSQL Database and
-                    Support for Concurrent OLTP and OLAP
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">October 11, 2018</div>
-                <h3>
-                  <a href="#">
-                    NoSQL Experts from Comcast, Grab and Kiwi.com to Keynote
-                    ScyllaDB Summit
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">June 6, 2018</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces Support for IBM Power Systems
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">April 25, 2018</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Secures $10 Million in Series C Funding
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">March 21, 2018</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Introduces ScyllaDB Manager for Greater Centralized
-                    Control of ScyllaDB Database Clusters
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">November 8, 2017</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces Integration with World’s First 10nm
-                    Qualcomm Centriq 2400 Server Processor
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">October 24, 2017</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces 2.0 Release of Its Open Source NoSQL
-                    Database
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">October 17, 2017</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Acquires Seastar.io Database-as-a-Service
-                    Technology
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">May 2, 2017</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB and Samsung SDS Announce Global Partnership
-                  </a>
-                </h3>
-                <hr />
-              </div>
+              In The News
+            </button>
+            <button
+              className={`relative z-10 w-1/2 py-2 text-center rounded-full transition-colors duration-300 ${activeTab === "press" ? "text-white" : "text-indigo-300"}`}
+              onClick={() => setActiveTab("press")}
+            >
+              Press Releases
+            </button>
+          </div>
+        </motion.div>
 
-              <div className="press-release-item">
-                <div className="post-date">March 8, 2017</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Closes $16 Million in Series B Funding to Expand
-                    Next-Generation Cassandra Database
-                  </a>
-                </h3>
-                <hr />
-              </div>
-              <div className="press-release-item">
-                <div className="post-date">September 6, 2016</div>
-                <h3>
-                  <a href="#">
-                    ScyllaDB Announces General Availability of World’s Fastest
-                    NoSQL Database
-                  </a>
-                </h3>
-                <hr />
-                
-              </div>
+        {/* Content */}
+        <div>
+          {activeTab === "news" ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {newsData
+                .filter((item) => item.category === "news")
+                .map((item, index) => (
+                  <motion.div
+                    key={item.id}
+                    className="bg-indigo-950/50 backdrop-blur-sm rounded-xl overflow-hidden border border-indigo-800/50 hover:border-indigo-600 transition-all duration-300"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.1 * index }}
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={item.image || "/placeholder.svg"}
+                        alt={item.title}
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center mb-4">
+                        <div className="relative h-6 w-6 mr-2">
+                          <img
+                            src={item.sourceImage || "/placeholder.svg"}
+                            alt={item.source}
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                        <span className="text-sm text-indigo-300">{item.source}</span>
+                        <span className="mx-2 text-indigo-500">•</span>
+                        <span className="text-sm text-indigo-400">{item.date}</span>
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-4 line-clamp-2">{item.title}</h3>
+                      <Link
+                        to="#"
+                        className="text-indigo-400 hover:text-white transition-colors duration-300 flex items-center"
+                      >
+                        Read Article
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4 ml-2"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          />
+                        </svg>
+                      </Link>
+                    </div>
+                  </motion.div>
+                ))}
             </div>
-          </div>
-        ) : (
-          <div className="news-container">
-            {newsData.map(({ id, img, desc, date }) => {
-              return (
-                <div key={id} className="card">
-                  <img
-                    src={img}
-                    alt="newsimage"
-                    style={{ height: "50px", width: "300px" }}
-                  />
-                  <h3 className="p1">{desc}</h3>
-                  <p className="p2">{date}</p>
-                </div>
-              );
-            })}
-          </div>
-        )}
-      </div>
-
-      <div className="contact-conatianer">
-        <div className="contact-card">
-          <img className="img1"
-            src="https://www.scylladb.com/wp-content/uploads/ScyllaDB-Enterprise-Mascot-2.png"
-            alt="conatct-img"
-            style={{ width: "100px", height: "100px" }}
-          />
-          <h3>Contact Us</h3>
-          
-          <p>Drop us a line to get in touch or start a live chat.</p>
-          <a href="#">Let's talk</a>
+          ) : (
+            <div className="bg-indigo-950/50 backdrop-blur-sm rounded-xl border border-indigo-800/50 overflow-hidden">
+              {pressReleases.map((release, index) => (
+                <motion.div
+                  key={release.id}
+                  className="border-b border-indigo-800/50 last:border-b-0"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.05 * index }}
+                >
+                  <div className="p-6">
+                    <div className="text-indigo-400 mb-2">{release.date}</div>
+                    <h3 className="text-xl text-white hover:text-indigo-300 transition-colors duration-300">
+                      <Link to="#">{release.title}</Link>
+                    </h3>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
         </div>
 
-        <div className="contact-card">
-          <img
-            src="https://www.scylladb.com/wp-content/uploads/Group-2.png"
-            alt="conatct-img"
-            style={{ width: "200px", height: "100px" }}
-          />
-          <h3>We're Hiring!</h3>
-          <p>Ready to become a Sea Monster?</p>
-          <a className="btn"  href="#">View our open positions</a>
+        {/* Contact Section */}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div
+            className="bg-indigo-950/50 backdrop-blur-sm rounded-xl p-6 border border-indigo-800/50 flex items-center"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            whileHover={{ scale: 1.02 }}
+          >
+            <div className="mr-6">
+              <img src="/images/mascot.png" alt="Contact" width={100} height={100} className="object-contain" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-2">Get More Information</h3>
+              <p className="text-indigo-300 mb-4">Need additional information about our events or news?</p>
+              <Link
+                to="/contact"
+                className="text-indigo-400 hover:text-white transition-colors duration-300 flex items-center"
+              >
+                Visit Contact Page
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 ml-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+            </div>
+          </motion.div>
+
+          <motion.div
+            className="bg-indigo-950/50 backdrop-blur-sm rounded-xl p-6 border border-indigo-800/50 flex items-center"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            whileHover={{ scale: 1.02 }}
+          >
+            <div className="mr-6">
+              <img src="/images/careers.png" alt="Careers" width={100} height={100} className="object-contain" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-2">We're Hiring!</h3>
+              <p className="text-indigo-300 mb-4">Ready to become a Data Monster?</p>
+              <Link
+                to="#"
+                className="px-4 py-2 bg-indigo-700 hover:bg-indigo-600 text-white rounded-md transition-colors duration-300 inline-block"
+              >
+                View our open positions
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </div>
-    </>
-  );
+    </div>
+  )
 }

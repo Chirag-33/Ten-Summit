@@ -1,464 +1,414 @@
-import React from 'react';
-import "./Team.css";
+"use client"
 
-function Team() {
+import { useState } from "react"
+import { motion } from "framer-motion"
+import { Twitter, Linkedin, Github, Globe } from "lucide-react"
 
-    return (
-        <div className='investor-team-container'>
-            <div className='investor-team-section1'>
-                <div className='investor-team-section2'>
-                    <div className='investor-team-heading'>
-                        <h1>We are ScyllaDB</h1>
-                    </div>
-                    <div className='investor-team-sub-heading1'>
-                        <h3>/SILL-ah/DEE-BEE</h3>
-                    </div>
-                    <div className='investor-team-sub-heading2'>
-                        <h3>We are the team behind ScyllaDB, the database for predictable<br /> performance at scale.</h3>
-                    </div>
-                    <div className='elementor-main'>
-                        <div className='elementor1'>
-                            <img src="https://www.scylladb.com/wp-content/uploads/Monster.png" alt="ScyllaDB Mascot" />
-                        </div>
-                        <div className='elementor2'>
-                            <img src="https://www.scylladb.com/wp-content/uploads/monster-company-hero-1.svg" alt="ScyllaDB Mascot" />
-                        </div>
-                        <div className='elementor3' style={{marginLeft:"800px"}}>
-                            <img src="https://www.scylladb.com/wp-content/uploads/monster-company-hero-3.svg" alt="ScyllaDB Mascot" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className='elementor-para'>
-                <p>With team members across 27 countries, we prioritize a collaborative, open culture to ensure our users’ <br /> success. Organizations like Discord, Disney+, Expedia, Zillow, Palo Alto Networks, and Strava rely on <br /> ScyllaDB to deliver real-time responses for their data-intensive applications.</p>
-                <div className='elementor-para-img-container'>
-                    <div className='elementor-para-img'>
-                        <img src="https://www.scylladb.com/wp-content/uploads/story-image-1.png" alt="Our Story" />
-                        <h2 className='elementor-para-h2'>Our Story</h2>
-                        <p className='elementor-para-span1'>
-                            ScyllaDB was founded by the team who designed and developed the KVM hypervisor, the default hypervisor in many cloud computing environments, including Google Compute Engine, Amazon Web Services, and OpenStack.
-                        </p>
-                        <p className='elementor-para-span2'> 
-                          <span>  Our company is growing rapidly and we have team members spread across the globe. This is our story.</span>
-                        </p>
-                </div>
-                <div className='elementor-para-img'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/story-image-1.png" alt="Our Story" />
-                    <h2 className='elementor-para-h2'>Our Story</h2>
-                    <p className='elementor-para-span1'>
-                        ScyllaDB was founded by the team who designed and developed the KVM hypervisor, the default hypervisor in many cloud computing environments, including Google Compute Engine, Amazon Web Services, and OpenStack.
-                    </p>
-                    <p className='elementor-para-span2'>
-                        Our company is growing rapidly and we have team members spread across the globe. This is our story.
-                    </p>
-                </div>
-                <div className='elementor-para-img'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/story-image-1.png" alt="Our Story" />
-                    <h2 className='elementor-para-h2'>Our Story</h2>
-                    <p className='elementor-para-span1'>
-                        ScyllaDB was founded by the team who designed and developed the KVM hypervisor, the default hypervisor in many cloud computing environments, including Google Compute Engine, Amazon Web Services, and OpenStack.
-                    </p>
-                    <p className='elementor-para-span2'>
-                        Our company is growing rapidly and we have team members spread across the globe. This is our story.
-                    </p>
-                </div>
-            </div>
-            <div className='elementor-para-para-h2'>
-                <h2>Core Values</h2>
-            </div>
-            <div className='elementor-team-content-container-head'>
-                <div className='elementor-team-content-container'>
-                    <div className='elementor-team-content'>
-                        <img src="https://www.scylladb.com/wp-content/uploads/about-open-culture-re.png" alt="Open Culture" />
-                        <h4>Open Culture</h4>
-                        <p>Our work is done in the open and we are straightforward with each other.</p>
-                    </div>
-                    <div className='elementor-team-content'>
-                        <img src="https://www.scylladb.com/wp-content/uploads/about-commitment-re.png" alt="Open Culture" />
-                        <h4>Commitment</h4>
-                        <p>We are committed to excellence and bring our best game every day.</p>
-                    </div>
-                    <div className='elementor-team-content'>
-                        <img src="https://www.scylladb.com/wp-content/uploads/about-yeswecan-re.png" alt="Open Culture" />
-                        <h4>Yes, We Can</h4>
-                        <p>The biggest challenges get us going in the morning.</p>
-                    </div>
-                    <div className='elementor-team-content'>
-                        <img src="https://www.scylladb.com/wp-content/uploads/about-better-together-re.png" alt="Open Culture" />
-                        <h4>Better Together</h4>
-                        <p>We are one team. Cross-team pollination and a feedback culture make us better.</p>
-                    </div>
-                    <div className='elementor-team-content'>
-                        <img src="https://www.scylladb.com/wp-content/uploads/about-fairness-re.png" alt="Open Culture" />
-                        <h4>Fairness</h4>
-                        <p>We are fair with ourselves, our users, our community, our investors, everyone.</p>
-                    </div>
-                </div>
+// Sample speakers data
+const speakers = [
+  {
+    id: 1,
+    name: "Chris Riccomini",
+    role: "Software Architect & Author",
+    company: "Tech Innovations",
+    bio: "Chris is a renowned software architect specializing in distributed systems and data pipelines. He has authored several books on system design and regularly speaks at international conferences.",
+    image: "/placeholder.svg?height=400&width=400",
+    socials: {
+      twitter: "#",
+      linkedin: "#",
+      github: "#",
+      website: "#",
+    },
+    featured: true,
+    category: "architecture",
+  },
+  {
+    id: 2,
+    name: "Vicki Niu",
+    role: "Senior Engineer",
+    company: "Discord",
+    bio: "Vicki leads search and AI initiatives at Discord, focusing on scalable solutions for real-time data processing. She previously worked on search infrastructure at Google.",
+    image: "/placeholder.svg?height=400&width=400",
+    socials: {
+      twitter: "#",
+      linkedin: "#",
+      github: "#",
+    },
+    featured: true,
+    category: "ai",
+  },
+  {
+    id: 3,
+    name: "Kelsey Hightower",
+    role: "Principal Engineer",
+    company: "Cloud Computing",
+    bio: "Kelsey is a respected voice in the cloud-native community, known for his work on Kubernetes and containerization. He advocates for simplicity and practicality in system design.",
+    image: "/placeholder.svg?height=400&width=400",
+    socials: {
+      twitter: "#",
+      linkedin: "#",
+      github: "#",
+      website: "#",
+    },
+    featured: true,
+    category: "cloud",
+  },
+  {
+    id: 4,
+    name: "Sarah Johnson",
+    role: "Database Architect",
+    company: "DataScale Systems",
+    bio: "Sarah specializes in high-performance database systems and has led the architecture of several widely-used open-source database projects.",
+    image: "/placeholder.svg?height=400&width=400",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+      github: "#",
+    },
+    featured: false,
+    category: "database",
+  },
+  {
+    id: 5,
+    name: "Miguel Rodriguez",
+    role: "Chief Data Officer",
+    company: "TechGiant Inc.",
+    bio: "Miguel has pioneered innovative approaches to data management at scale, helping organizations transform their data infrastructure for the AI era.",
+    image: "/placeholder.svg?height=400&width=400",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+    },
+    featured: false,
+    category: "data",
+  },
+  {
+    id: 6,
+    name: "Priya Sharma",
+    role: "Performance Engineer",
+    company: "ScaleDB",
+    bio: "Priya is an expert in database performance optimization, specializing in tuning systems for extreme throughput and minimal latency.",
+    image: "/placeholder.svg?height=400&width=400",
+    socials: {
+      linkedin: "#",
+      github: "#",
+      website: "#",
+    },
+    featured: false,
+    category: "performance",
+  },
+  {
+    id: 7,
+    name: "David Kim",
+    role: "Open Source Contributor",
+    company: "Database Foundation",
+    bio: "David has made significant contributions to several open-source database projects and advocates for community-driven development.",
+    image: "/placeholder.svg?height=400&width=400",
+    socials: {
+      github: "#",
+      twitter: "#",
+      website: "#",
+    },
+    featured: false,
+    category: "opensource",
+  },
+  {
+    id: 8,
+    name: "Elena Rodriguez",
+    role: "Cloud Solutions Architect",
+    company: "CloudScale",
+    bio: "Elena specializes in designing resilient database architectures in cloud environments, with expertise in multi-region deployments.",
+    image: "/placeholder.svg?height=400&width=400",
+    socials: {
+      linkedin: "#",
+      twitter: "#",
+    },
+    featured: false,
+    category: "cloud",
+  },
+]
 
-            </div>
+const categories = [
+  { id: "all", name: "All Speakers" },
+  { id: "architecture", name: "Architecture" },
+  { id: "database", name: "Database" },
+  { id: "cloud", name: "Cloud" },
+  { id: "ai", name: "AI & Search" },
+  { id: "performance", name: "Performance" },
+  { id: "opensource", name: "Open Source" },
+  { id: "data", name: "Data Management" },
+]
 
-            <h2 className='elementor-management-team'>ScyllaDB Management Team</h2>
-            <div className='elementor-card-container-head'>
-                <div className='elementor-card-container' >
-                    <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Avi Kivity" />
-                    <div className='elementor-card-content'>
-                        <h3>Avi Kivity</h3>
-                        <h4>CTO & Co-founder</h4>
-                        <p className='para-arrow'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='elementor-card-container' >
-                    <img src="https://www.scylladb.com/wp-content/uploads/dor-laor-company.jpg" alt="Avi Kivity" />
-                    <div className='elementor-card-content'>
-                        <h3>Dor Laor</h3>
-                        <h4>CEO & Co-founder</h4>
-                        <p className='para-arrow'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='elementor-card-container' >
-                    <img src="https://www.scylladb.com/wp-content/uploads/danit-livne-company.jpg" alt="Avi Kivity" />
-                    <div className='elementor-card-content'>
-                        <h3>Danit Livne</h3>
-                        <h4>CFO</h4>
-                        <p className='para-arrow'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='elementor-card-container' >
-                    <img src="https://www.scylladb.com/wp-content/uploads/wayne-ariola-company.jpg" alt="Avi Kivity" />
-                    <div className='elementor-card-content'>
-                        <h3>Wayne Ariola</h3>
-                        <h4>Chief Marketing Officer</h4>
-                        <p className='para-arrow'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='elementor-card-container' >
-                    <img src="https://www.scylladb.com/wp-content/uploads/jon-blake-company.jpg" alt="Avi Kivity" />
-                    <div className='elementor-card-content'>
-                        <h3>Jon Bakke</h3>
-                        <h4>CRO</h4>
-                        <p className='para-arrow'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='elementor-card-container' >
-                    <img src="https://www.scylladb.com/wp-content/uploads/tzach-livyatan-company.jpg" alt="Avi Kivity" />
-                    <div className='elementor-card-content'>
-                        <h3>Tzach Livyatan</h3>
-                        <h4>VP of Product</h4>
-                        <p className='para-arrow'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='elementor-card-container' >
-                    <img src="https://www.scylladb.com/wp-content/uploads/austin-rutherford-company.jpg" alt="Avi Kivity" />
-                    <div className='elementor-card-content'>
-                        <h3>Austin Rutherford</h3>
-                        <h4>SVP of Customer Engineering</h4>
-                        <p className='para-arrow'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='elementor-card-container' >
-                    <img src="https://www.scylladb.com/wp-content/uploads/yaniv-kaul-company.jpg" alt="Avi Kivity" />
-                    <div className='elementor-card-content'>
-                        <h3>Yaniv Kaul</h3>
-                        <h4>VP of R&D</h4>
-                        <p className='para-arrow'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='elementor-card-container' >
-                    <img src="https://www.scylladb.com/wp-content/uploads/gabriel-mizrahi.jpg" alt="Avi Kivity" />
-                    <div className='elementor-card-content'>
-                        <h3>Gabriel M. Mizrahi</h3>
-                        <h4>VP of Engineering</h4>
-                        <p className='para-arrow'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='elementor-card-container' >
-                    <img src="https://www.scylladb.com/wp-content/uploads/karin-nidam-company.jpg" alt="Avi Kivity" />
-                    <div className='elementor-card-content'>
-                        <h3>Karin Nidam</h3>
-                        <h4>VP of Operations</h4>
-                        <p className='para-arrow'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='elementor-card-container' >
-                    <img src="https://www.scylladb.com/wp-content/uploads/orit-zeltzer-niv-company.jpg" alt="Avi Kivity" />
-                    <div className='elementor-card-content'>
-                        <h3>Orit Zeltzer Niv</h3>
-                        <h4>VP People</h4>
-                        <p className='para-arrow'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='elementor-card-container' >
-                    <img src="https://www.scylladb.com/wp-content/uploads/rich-nigro-company.jpg" alt="Avi Kivity" />
-                    <div className='elementor-card-content'>
-                        <h3>Rich Nigro</h3>
-                        <h4>VP of Sales</h4>
-                        <p className='para-arrow'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='elementor-card-container' >
-                    <img src="https://www.scylladb.com/wp-content/uploads/Ilan-ackerman-company.jpg" alt="Avi Kivity" />
-                    <div className='elementor-card-content'>
-                        <h3>Ilan Ackerman</h3>
-                        <h4>VP Sales EMEA & APAC</h4>
-                        <p className='para-arrow'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='elementor-card-container' >
-                    <img src="https://www.scylladb.com/wp-content/uploads/julia-angell-company.jpg" alt="Avi Kivity" />
-                    <div className='elementor-card-content'>
-                        <h3>Julia Angell</h3>
-                        <h4>VP Growth Marketing</h4>
-                        <p className='para-arrow'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className='elementor-button-container'>
-                <img src="https://www.scylladb.com/wp-content/uploads/scylla-enterprise-3.png" alt="reload" />
-                <div className='elementor-button-content'>
-                    <h2>Want to Join the ScyllaDB Team? <br /> We’re Hiring!</h2>
-                    <p className='button-arrow'>
-                        <a className='elementor-button' href="/careers/">Open Positions </a>
-                        →
-                    </p>
-                </div>
-            </div>
-            <div className='directors-heading'>
-                <h2>ScyllaDB Board of Directors</h2>
-            </div>
-            <div className="director-card-container-head">
-                <div className='director-card-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/benny-schnaider-company.jpg" alt="Benny Schnaider" />
-                    <div className="director-card-content">
-                        <h3>Benny Schnaider</h3>
-                        <h4>Ravello Systems</h4>
-                        <p className='para-arrow2'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='director-card-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/adam-fisher-company.jpg" alt="Benny Schnaider" />
-                    <div className="director-card-content">
-                        <h3>Adam Fisher</h3>
-                        <h4>Bessemer Venture Partners</h4>
-                        <p className='para-arrow2'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='director-card-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/dor-laor-company.jpg" alt="Benny Schnaider" />
-                    <div className="director-card-content">
-                        <h3>Dor Laor</h3>
-                        <h4>ScyllaDB</h4>
-                        <p className='para-arrow2'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='director-card-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/avi-kivity-company.jpg" alt="Benny Schnaider" />
-                    <div className="director-card-content">
-                        <h3>Avi Kivity</h3>
-                        <h4>ScyllaDB</h4>
-                        <p className='para-arrow2'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='director-card-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/davor-hebel-company.jpg" alt="Benny Schnaider" />
-                    <div className="director-card-content">
-                        <h3>Davor Hebel</h3>
-                        <h4>Eight Roads Ventures</h4>
-                        <p className='para-arrow2'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='director-card-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/yahal-zilka-company.jpg" alt="Benny Schnaider" />
-                    <div className="director-card-content">
-                        <h3>Yahal Zilka</h3>
-                        <h4>Magma Venture Partners</h4>
-                        <p className='para-arrow2'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='director-card-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/merav-weinryb-company.jpg" alt="Benny Schnaider" />
-                    <div className="director-card-content">
-                        <h3>Merav Weinryb</h3>
-                        <h4>Qualcomm Ventures</h4>
-                        <p className='para-arrow2'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='director-card-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/amir-fridman-company.jpg" alt="Benny Schnaider" />
-                    <div className="director-card-content">
-                        <h3>Amir Fridman</h3>
-                        <h4>Western Digital Corporation</h4>
-                        <p className='para-arrow2'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-                <div className='director-card-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/shahar-tzafrir-company.jpg" alt="Benny Schnaider" />
-                    <div className="director-card-content">
-                        <h3>Shahar Tzafrir</h3>
-                        <h4>TLV Partners</h4>
-                        <p className='para-arrow2'>
-                            <a className='open-bio' href="#">See Bio </a>
-                            →
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div className="investor-heading">
-                <h2>ScyllaDB Investors</h2>
-            </div>
-            <div className='elementor-investors-container-head'>
-                <div className='elementor-investors-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/logo-bessemer-venture-partners-white.png" alt="Investor Logo" />
-                </div>
-                <div className='elementor-investors-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/8rds-logo-white.png" alt="Investor Logo" />
-                </div>
-                <div className='elementor-investors-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/logo-innovation-endeavors-white.png" alt="Investor Logo" />
-                </div>
-                <div className='elementor-investors-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/logo-magma-white.png" alt="Investor Logo" />
-                </div>
-                <div className='elementor-investors-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/logo-qualcomm-ventures-white.png" alt="Investor Logo" />
-                </div>
-                <div className='elementor-investors-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/logo-wing-white.png" alt="Investor Logo" />
-                </div>
-                <div className='elementor-investors-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/TLV-Partners_logo-white.png" alt="Investor Logo" />
-                </div>
-                <div className='elementor-investors-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/logo-western-digital-capital-white.png" alt="Investor Logo" />
-                </div>
-                <div className='elementor-investors-container'>
-                    <img src="https://www.scylladb.com/wp-content/uploads/Vertex-white.png" alt="Investor Logo" />
-                </div>
-            </div>
-            <div className='elementor-explore-container-head'>
-                <div className='elementor-explore-container'>
-                    <div className='elementor-explore-content'>
-                        <div className='elementor-explore-heading'>
-                            {/* <img src="" alt="" /> */}
-                            <h3>Newsroom</h3>
-                        </div>
-                        <div>
-                            <p className='elementor-explore-para1'>Press coverage and
-                                announcements from ScyllaDB
-                            </p>
-                            <p className='elementor-explore-para2'>
-                                See What's New
-                                →
-                                {/* <Link to="">→</Link> */}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div className='elementor-explore-container'>
-                    <div className='elementor-explore-content'>
-                        <div className='elementor-explore-heading'>
-                            {/* <img src="" alt="" /> */}
-                            <h3>Blog</h3>
-                        </div>
-                        <div>
-                            <p className='elementor-explore-para1'>Technical deep dives
-                                and tips and tricks from our experts
-                            </p>
-                            <p className='elementor-explore-para2'>
-                                Explore Now
-                                →
-                                {/* <Link to="">→</Link> */}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div className='elementor-explore-container'>
-                    <div className='elementor-explore-content'>
-                        <div className='elementor-explore-heading'>
-                            {/* <img src="" alt="" /> */}
-                            <h3>Contact Us</h3>
-                        </div>
-                        <div>
-                            <p className='elementor-explore-para1'>Drop us a line
-                                to get in touch or start a live chat
-                            </p>
-                            <p className='elementor-explore-para2'>
-                                Let's Talk
-                                →
-                                {/* <Link to="">→</Link> */}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+export default function TeamPage() {
+  const [activeCategory, setActiveCategory] = useState("all")
+  const [selectedSpeaker, setSelectedSpeaker] = useState(null)
+
+  const filteredSpeakers =
+    activeCategory === "all" ? speakers : speakers.filter((speaker) => speaker.category === activeCategory)
+
+  const handleSpeakerClick = (id) => {
+    setSelectedSpeaker(id === selectedSpeaker ? null : id)
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-indigo-950 via-indigo-900 to-blue-900">
+      <div className="relative">
+        {/* Animated stars background */}
+        <div className="absolute inset-0 z-0">
+          {[...Array(50)].map((_, index) => (
+            <motion.div
+              key={index}
+              className="star"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 1, 0] }}
+              transition={{
+                duration: Math.random() * 3 + 1,
+                repeat: Number.POSITIVE_INFINITY,
+                ease: "easeInOut",
+              }}
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+            />
+          ))}
         </div>
+
+        <div className="relative z-10 py-12 px-4 md:px-8 max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <motion.h1
+              className="text-4xl md:text-5xl font-bold mb-4"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Our Speakers
+            </motion.h1>
+            <motion.p
+              className="text-xl text-gray-300 max-w-3xl mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Meet the industry experts and thought leaders who will be sharing their knowledge and insights at the
+              Monster Ten Summit
+            </motion.p>
+          </div>
+
+          {/* Category filters */}
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {categories.map((category) => (
+              <motion.button
+                key={category.id}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  activeCategory === category.id
+                    ? "bg-gradient-to-r from-blue-600 to-indigo-700 text-white"
+                    : "bg-indigo-950/50 text-gray-300 border border-indigo-800 hover:bg-indigo-900/50"
+                }`}
+                onClick={() => setActiveCategory(category.id)}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 * categories.indexOf(category) }}
+              >
+                {category.name}
+              </motion.button>
+            ))}
+          </div>
+
+          {/* Featured speakers section */}
+          {activeCategory === "all" && (
+            <div className="mb-16">
+              <h2 className="text-2xl font-bold mb-8 text-center">Featured Speakers</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {speakers
+                  .filter((speaker) => speaker.featured)
+                  .map((speaker) => (
+                    <motion.div
+                      key={speaker.id}
+                      className="bg-indigo-950/70 border border-indigo-800 rounded-lg overflow-hidden"
+                      whileHover={{ scale: 1.02 }}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: 0.1 * speaker.id }}
+                    >
+                      <div className="relative h-64 w-full">
+                        <img
+                          src={speaker.image || "/placeholder.svg"}
+                          alt={speaker.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <h3 className="text-xl font-bold">{speaker.name}</h3>
+                        <p className="text-blue-400">{speaker.role}</p>
+                        <p className="text-gray-400 text-sm mb-4">{speaker.company}</p>
+                        <p className="text-gray-300 mb-4 line-clamp-3">{speaker.bio}</p>
+                        <div className="flex gap-3">
+                          {speaker.socials.twitter && (
+                            <a
+                              href={speaker.socials.twitter}
+                              className="text-gray-400 hover:text-white transition-colors"
+                            >
+                              <Twitter className="w-5 h-5" />
+                              <span className="sr-only">Twitter</span>
+                            </a>
+                          )}
+                          {speaker.socials.linkedin && (
+                            <a
+                              href={speaker.socials.linkedin}
+                              className="text-gray-400 hover:text-white transition-colors"
+                            >
+                              <Linkedin className="w-5 h-5" />
+                              <span className="sr-only">LinkedIn</span>
+                            </a>
+                          )}
+                          {speaker.socials.github && (
+                            <a
+                              href={speaker.socials.github}
+                              className="text-gray-400 hover:text-white transition-colors"
+                            >
+                              <Github className="w-5 h-5" />
+                              <span className="sr-only">GitHub</span>
+                            </a>
+                          )}
+                          {speaker.socials.website && (
+                            <a
+                              href={speaker.socials.website}
+                              className="text-gray-400 hover:text-white transition-colors"
+                            >
+                              <Globe className="w-5 h-5" />
+                              <span className="sr-only">Website</span>
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </motion.div>
+                  ))}
+              </div>
+            </div>
+          )}
+
+          {/* All speakers grid */}
+          <div>
+            <h2 className="text-2xl font-bold mb-8 text-center">
+              {activeCategory === "all" ? "All Speakers" : categories.find((c) => c.id === activeCategory)?.name}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {filteredSpeakers.map((speaker) => (
+                <motion.div
+                  key={speaker.id}
+                  className={`bg-indigo-950/70 border border-indigo-800 rounded-lg overflow-hidden cursor-pointer transition-all duration-300 ${
+                    selectedSpeaker === speaker.id ? "ring-2 ring-blue-500" : ""
+                  }`}
+                  onClick={() => handleSpeakerClick(speaker.id)}
+                  whileHover={{ scale: 1.02 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.05 * speaker.id }}
+                >
+                  <div className="relative h-64 w-full">
+                    <img
+                      src={speaker.image || "/placeholder.svg"}
+                      alt={speaker.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-lg font-bold">{speaker.name}</h3>
+                    <p className="text-blue-400 text-sm">{speaker.role}</p>
+                    <p className="text-gray-400 text-xs">{speaker.company}</p>
+
+                    {selectedSpeaker === speaker.id && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        transition={{ duration: 0.3 }}
+                        className="mt-4"
+                      >
+                        <p className="text-gray-300 text-sm mb-4">{speaker.bio}</p>
+                        <div className="flex gap-3">
+                          {speaker.socials.twitter && (
+                            <a
+                              href={speaker.socials.twitter}
+                              className="text-gray-400 hover:text-white transition-colors"
+                            >
+                              <Twitter className="w-4 h-4" />
+                              <span className="sr-only">Twitter</span>
+                            </a>
+                          )}
+                          {speaker.socials.linkedin && (
+                            <a
+                              href={speaker.socials.linkedin}
+                              className="text-gray-400 hover:text-white transition-colors"
+                            >
+                              <Linkedin className="w-4 h-4" />
+                              <span className="sr-only">LinkedIn</span>
+                            </a>
+                          )}
+                          {speaker.socials.github && (
+                            <a
+                              href={speaker.socials.github}
+                              className="text-gray-400 hover:text-white transition-colors"
+                            >
+                              <Github className="w-4 h-4" />
+                              <span className="sr-only">GitHub</span>
+                            </a>
+                          )}
+                          {speaker.socials.website && (
+                            <a
+                              href={speaker.socials.website}
+                              className="text-gray-400 hover:text-white transition-colors"
+                            >
+                              <Globe className="w-4 h-4" />
+                              <span className="sr-only">Website</span>
+                            </a>
+                          )}
+                        </div>
+                      </motion.div>
+                    )}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-16 text-center">
+            <motion.h3
+              className="text-2xl font-bold mb-4"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              Learn from the Best in the Industry
+            </motion.h3>
+            <motion.p
+              className="text-gray-300 mb-6"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              Register today to secure your spot at the Monster Ten Summit
+            </motion.p>
+            <motion.a
+              href="/register"
+              className="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-700 rounded-full text-white font-medium"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              Register Now
+            </motion.a>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  )
 }
-
-export default Team;
